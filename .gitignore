@@ -1,8 +1,31 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Virtual Environment
 .venv/
 venv/
+
+# Environment Variables
 .env
-outputs/logs/
+
+# SUMO Output
+outputs/
+*.tripinfo.xml
+*.netstate.xml
+*.fcd.xml
+
+# Models
 models/*.pth
-*.csv
+models/*.pt
+
+# Dataset
+data/raw/*.csv
+data/processed/*.csv
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
