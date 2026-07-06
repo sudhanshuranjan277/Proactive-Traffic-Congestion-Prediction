@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+
+    <!-- Vehicle Type -->
+    <vType id="car"
+           accel="2.6"
+           decel="4.5"
+           sigma="0.5"
+           length="5"
+           maxSpeed="20"/>
+
+    <!-- Route -->
+    <route id="route0" edges="N2C C2S"/>
+
+    <!-- Vehicles -->
+    <vehicle id="car0"
+             type="car"
+             route="route0"
+             depart="0"/>
+
+    <vehicle id="car1"
+             type="car"
+             route="route0"
+             depart="5"/>
+
+    <vehicle id="car2"
+             type="car"
+             route="route0"
+             depart="10"/>
+
+</routes>
