@@ -4,6 +4,7 @@ SUMO Environment
 Responsible for:
 - Starting SUMO
 - Connecting through TraCI
+- Running the simulation
 - Closing SUMO
 """
 
@@ -45,9 +46,27 @@ class SumoEnvironment:
 
         self.connected = True
 
-        print("Connected Successfully.")
+        print("SUMO Connected Successfully.")
 
         return True
+
+    def simulation_step(self):
+        """
+        Execute one simulation step.
+        """
+        traci.simulationStep()
+
+    def get_vehicle_ids(self):
+        """
+        Return all vehicle IDs currently in the simulation.
+        """
+        return traci.vehicle.getIDList()
+
+    def get_vehicle_count(self):
+        """
+        Return the total number of vehicles currently in the simulation.
+        """
+        return len(traci.vehicle.getIDList())
 
     def disconnect(self):
 

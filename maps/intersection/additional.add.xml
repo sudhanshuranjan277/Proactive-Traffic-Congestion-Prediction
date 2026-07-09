@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+
+    <!-- North → South -->
+    <inductionLoop
+        id="loop_NS"
+        lane="N2C_0"
+        pos="50"
+        freq="1"
+        file="NUL"/>
+
+    <!-- South → North -->
+    <inductionLoop
+        id="loop_SN"
+        lane="S2C_0"
+        pos="50"
+        freq="1"
+        file="NUL"/>
+
+    <!-- East → West -->
+    <inductionLoop
+        id="loop_EW"
+        lane="E2C_0"
+        pos="50"
+        freq="1"
+        file="NUL"/>
+
+    <!-- West → East -->
+    <inductionLoop
+        id="loop_WE"
+        lane="W2C_0"
+        pos="50"
+        freq="1"
+        file="NUL"/>
+
+</additional>

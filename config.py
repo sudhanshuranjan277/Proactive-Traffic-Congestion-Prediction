@@ -4,6 +4,7 @@ AI Traffic Control System
 """
 
 import os
+
 # ======================================
 # Project Information
 # ======================================
@@ -24,7 +25,6 @@ PROCESSED_DATA_DIR = os.path.join(DATA_DIR, "processed")
 
 MODEL_DIR = os.path.join(PROJECT_ROOT, "models")
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "outputs")
-
 MAP_DIR = os.path.join(PROJECT_ROOT, "maps")
 
 # ======================================
@@ -33,8 +33,12 @@ MAP_DIR = os.path.join(PROJECT_ROOT, "maps")
 
 SUMO_BINARY = "sumo-gui"
 
-# This will be updated after we create our first map
-SUMO_CONFIG = None
+SUMO_CONFIG = os.path.join(
+    PROJECT_ROOT,
+    "maps",
+    "intersection",
+    "simulation.sumocfg"
+)
 
 # ======================================
 # Simulation Settings
@@ -58,15 +62,15 @@ EPISODES = 100
 LOOKBACK = 30
 PREDICTION_HORIZON = 10
 
-# ==========================
+# ======================================
 # Create Required Directories
-# ==========================
+# ======================================
 
 for directory in [
     DATA_DIR,
     RAW_DATA_DIR,
     PROCESSED_DATA_DIR,
     MODEL_DIR,
-    OUTPUT_DIR
+    OUTPUT_DIR,
 ]:
     os.makedirs(directory, exist_ok=True)
