@@ -1,15 +1,15 @@
 """
 Traffic Feature Collector
 
-This module collects all real-time traffic parameters
-from the running SUMO simulation using TraCI.
+Collects real-time traffic parameters
+from SUMO using TraCI.
 
 Current Features:
 1. Traffic Flow
 2. Vehicle Count
 
-Upcoming Features:
-3. Traffic Event Type (TEI)
+Planned Features:
+3. Traffic Event Type
 4. Remaining Green Time
 5. Downstream Occupancy
 6. Queue Length
@@ -21,68 +21,58 @@ import traci
 class TrafficCollector:
 
     def __init__(self):
-        """Initialize Traffic Collector"""
-        pass
 
-    # =====================================================
-    # Vehicle Information
-    # =====================================================
+        self.traffic_detectors = [
+            "loop_osm_1",
+            "loop_osm_2",
+        ]
 
     def get_vehicle_ids(self):
         """
-        Returns all active vehicle IDs.
+        Return all active vehicle IDs.
         """
+
         return traci.vehicle.getIDList()
 
     def get_vehicle_count(self):
         """
-        Returns total number of vehicles
-        currently present in the network.
+        Return total number of active vehicles.
         """
-        return len(self.get_vehicle_ids())
 
-    # =====================================================
-    # Traffic Flow
-    # =====================================================
+        return len(self.get_vehicle_ids())
 
     def get_traffic_flow(self):
         """
-        Returns total traffic flow detected by
-        all induction loop detectors.
+        Calculate traffic flow using
+        OSM induction loop detectors.
         """
-
-        detector_ids = [
-            "loop_NS",
-            "loop_SN",
-            "loop_EW",
-            "loop_WE"
-        ]
 
         total_flow = 0
 
-        for detector in detector_ids:
-            total_flow += traci.inductionloop.getLastStepVehicleNumber(detector)
+        available_detectors = set(
+            traci.inductionloop.getIDList()
+        )
+
+        for detector in self.traffic_detectors:
+
+            if detector in available_detectors:
+
+                vehicle_count = (
+                    traci.inductionloop
+                    .getLastStepVehicleNumber(detector)
+                )
+
+                total_flow += vehicle_count
 
         return total_flow
 
-    # =====================================================
-    # Feature Collector
-    # =====================================================
-
     def collect_features(self):
         """
-        Collect all available traffic features.
-
-        Returns:
-            dict
+        Collect all currently implemented
+        real-time traffic features.
         """
 
-        features = {
-
+        return {
             "vehicle_count": self.get_vehicle_count(),
-
-            "traffic_flow": self.get_traffic_flow()
-
+            "traffic_flow": self.get_traffic_flow(),
         }
-
-        return features

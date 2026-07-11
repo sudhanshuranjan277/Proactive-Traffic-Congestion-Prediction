@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-12 00:34:57.625150 by Eclipse SUMO $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_27_1+0000-7717f2379d9
+<configuration>
+    <net-file value="C:\Users\sudha\2026-07-12-00-34-41\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\sudha\2026-07-12-00-34-41\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\sudha\2026-07-12-00-34-41\osm_stops.add.xml"/>
+    <output-file value="C:\Users\sudha\2026-07-12-00-34-41\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\sudha\2026-07-12-00-34-41\stopinfos.xml"/>
+    <routes-file value="C:\Users\sudha\2026-07-12-00-34-41\vehroutes.xml"/>
+    <trips-file value="C:\Users\sudha\2026-07-12-00-34-41\trips.trips.xml"/>
+    <end value="60.0"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <types value="bus,tram,minibus,share_taxi,aerialway"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_281:0" type="pt_bus" depart="3.0" departLane="best" from="570413587#1" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="1_bus_281:1" type="pt_bus" depart="15.0" departLane="best" from="581245363#4" to="997761545">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="-9182102064" duration="30"/>  <!-- YMCA -->
+    </trip>
+    <trip id="2_bus_282:0" type="pt_bus" depart="15.0" departLane="best" from="581245363#4" to="714990513#3">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="3_bus_706A:0" type="pt_bus" depart="17.0" departLane="best" from="581245363#4" to="998790356#8">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5345535254" duration="30"/>  <!-- Firoz Shah Road -->
+    </trip>
+    <trip id="4_bus_890:0" type="pt_bus" depart="52.0" departLane="best" from="581245363#4" to="-1053851218">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="6385537605" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="5483954443" duration="30"/>  <!-- Krishi Bhawan -->
+        <stop busStop="5484083823" duration="30"/>  <!-- Udyog Bhawan -->
+    </trip>
+    <trip id="9_bus_890:1" type="pt_bus" depart="131.0" departLane="best" from="760536610#1" to="782774056#1">
+    </trip>
+    <trip id="10_bus_890:2" type="pt_bus" depart="132.0" departLane="best" from="581245363#4" to="758753883">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="5483331673" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+    </trip>
+    <trip id="11_bus_680:0" type="pt_bus" depart="133.0" departLane="best" from="581245363#4" to="24584377#10">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="6225764792" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="12_bus_680:1" type="pt_bus" depart="165.0" departLane="best" from="708474897#0" to="-782774057#0">
+        <stop busStop="5483331671" duration="30"/>  <!-- South Avenue -->
+    </trip>
+    <trip id="13_bus_580:0" type="pt_bus" depart="201.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="14_bus_540:0" type="pt_bus" depart="204.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="15_bus_480:0" type="pt_bus" depart="227.0" departLane="best" from="581245363#4" to="24584377#10">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="16_bus_408E:0" type="pt_bus" depart="253.0" departLane="best" from="581245363#4" to="24584377#10">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="17_bus_391:0" type="pt_bus" depart="303.0" departLane="best" from="581245363#4" to="998790358#18">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="6385537605" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="7267338505" duration="30"/>  <!-- Krishi Bhawan -->
+        <stop busStop="5345535254" duration="30"/>  <!-- Firoz Shah Road -->
+        <stop busStop="4440796915" duration="30"/>  <!-- Kasturba Gandhi Marg Crossing -->
+    </trip>
+    <trip id="18_bus_390:0" type="pt_bus" depart="321.0" departLane="best" from="581245363#4" to="24584377#10">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="19_bus_378:0" type="pt_bus" depart="326.0" departLane="best" from="581245363#4" to="563679820#6">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673@7921460" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="-9182102064" duration="30"/>  <!-- YMCA -->
+        <stop busStop="9214974876" duration="30"/>  <!-- Jantar Mantar -->
+        <stop busStop="5432720712" duration="30"/>  <!-- Tolstoy Marg -->
+    </trip>
+    <trip id="20_bus_370:0" type="pt_bus" depart="331.0" departLane="best" from="581245363#4" to="24584377#10">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="21_bus_349:0" type="pt_bus" depart="346.0" departLane="best" from="581245363#4" to="563679820#6">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="-9182102064" duration="30"/>  <!-- YMCA -->
+        <stop busStop="9214974876" duration="30"/>  <!-- Jantar Mantar -->
+        <stop busStop="5432720712" duration="30"/>  <!-- Tolstoy Marg -->
+    </trip>
+    <trip id="22_bus_270:0" type="pt_bus" depart="353.0" departLane="best" from="581245363#4" to="447141139">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="4440796915" duration="30"/>  <!-- Kasturba Gandhi Marg Crossing -->
+        <stop busStop="5345535254" duration="30"/>  <!-- Firoz Shah Road -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+    </trip>
+    <trip id="23_bus_100:0" type="pt_bus" depart="362.0" departLane="best" from="581245363#4" to="447141151#7">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="7116238187" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="6225479821" duration="30"/>  <!-- Gurudwara Rakab Ganj -->
+        <stop busStop="6225479822" duration="30"/>  <!-- Talkatora Road -->
+        <stop busStop="6225479669" duration="30"/>  <!-- Doctor Ram Manohar Lohia Hospital -->
+    </trip>
+    <trip id="24_bus_100:1" type="pt_bus" depart="371.0" departLane="best" from="24577478#0" to="24584398#4">
+        <stop busStop="6404197725" duration="30"/>  <!-- Police Station Parliament Street -->
+        <stop busStop="5637100894" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="5637101391" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="5338584991" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5338584905" duration="30"/>  <!-- Doctor Ram Manohar Lohia Hospital -->
+        <stop busStop="6225480474" duration="30"/>  <!-- Talkatora Road -->
+        <stop busStop="6225482595" duration="30"/>  <!-- Gurudwara Rakab Ganj -->
+        <stop busStop="4156355793" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="25_bus_580:1" type="pt_bus" depart="383.0" departLane="best" from="581245363#4" to="447141152#1">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+    </trip>
+    <trip id="26_bus_480:1" type="pt_bus" depart="389.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="27_bus_540:1" type="pt_bus" depart="406.0" departLane="best" from="581245363#4" to="-1053851218">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+        <stop busStop="5346174186" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="5483331673@7921460" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="5483954443" duration="30"/>  <!-- Krishi Bhawan -->
+        <stop busStop="5484083823" duration="30"/>  <!-- Udyog Bhawan -->
+    </trip>
+    <trip id="32_bus_894:0" type="pt_bus" depart="483.0" departLane="best" from="116046169#3" to="116046169#3">
+        <stop busStop="971653361" duration="30"/>  <!-- Baroda House -->
+    </trip>
+    <trip id="33_bus_391:1" type="pt_bus" depart="484.0" departLane="best" from="998790356#0" to="570413587#1">
+        <stop busStop="5587022727" duration="30"/>  <!-- Kasturba Gandhi Marg Crossing -->
+        <stop busStop="5587022726" duration="30"/>  <!-- Firoz Shah Road -->
+        <stop busStop="5637100894" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="5637101391" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="34_bus_944:0" type="pt_bus" depart="485.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="35_bus_944:1" type="pt_bus" depart="497.0" departLane="best" from="581245363#4" to="714990513#3">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+    </trip>
+    <trip id="36_bus_810:0" type="pt_bus" depart="508.0" departLane="best" from="581245363#4" to="714990513#3">
+        <stop busStop="5561975423" duration="30"/>  <!-- Kendriya Terminal -->
+        <stop busStop="5483332064" duration="30"/>  <!-- Kendriya Terminal Church Road -->
+    </trip>
+    <trip id="37_bus_810:1" type="pt_bus" depart="517.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="38_bus_390:1" type="pt_bus" depart="535.0" departLane="best" from="714990514#0" to="570413587#1">
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="39_bus_349:1" type="pt_bus" depart="574.0" departLane="best" from="563974735#0" to="570413587#1">
+        <stop busStop="5432714822" duration="30"/>  <!-- None -->
+        <stop busStop="9214974884" duration="30"/>  <!-- Janpath -->
+        <stop busStop="6404197725" duration="30"/>  <!-- Police Station Parliament Street -->
+        <stop busStop="5637100894" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="5637101391" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="6225478959" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="6225479426" duration="30"/>  <!-- NDPO -->
+        <stop busStop="6225479657" duration="30"/>  <!-- None -->
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+    <trip id="40_bus_378:1" type="pt_bus" depart="583.0" departLane="best" from="563974735#0" to="570413587#1">
+        <stop busStop="5432714822" duration="30"/>  <!-- None -->
+        <stop busStop="6404197725" duration="30"/>  <!-- Police Station Parliament Street -->
+        <stop busStop="5637100894" duration="30"/>  <!-- Patel Chowk -->
+        <stop busStop="5637101391" duration="30"/>  <!-- Gurudwara Bangla Sahib -->
+        <stop busStop="6225478959" duration="30"/>  <!-- New Delhi Post Office -->
+        <stop busStop="6225479426" duration="30"/>  <!-- NDPO -->
+        <stop busStop="6225479657" duration="30"/>  <!-- None -->
+        <stop busStop="5483954444" duration="30"/>  <!-- Kendriya Terminal -->
+    </trip>
+</routes>

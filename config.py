@@ -31,14 +31,16 @@ MAP_DIR = os.path.join(PROJECT_ROOT, "maps")
 # SUMO Configuration
 # ======================================
 
-SUMO_BINARY = "sumo-gui"
+SUMO_BINARY = "sumo"
 
 SUMO_CONFIG = os.path.join(
     PROJECT_ROOT,
     "maps",
-    "intersection",
-    "simulation.sumocfg"
+    "osm",
+    "osm.sumocfg"
 )
+
+
 
 # ======================================
 # Simulation Settings
