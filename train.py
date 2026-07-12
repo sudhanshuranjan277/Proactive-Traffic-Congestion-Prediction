@@ -4,39 +4,56 @@ from integration.collector import TrafficCollector
 
 def main():
 
-    # Initialize Environment
     env = SumoEnvironment()
-
-    # Initialize Traffic Collector
     collector = TrafficCollector()
 
-    # Display Project Configuration
     env.show_configuration()
 
-    # Connect to SUMO
     if env.connect():
 
-        print("\nRunning Simulation...\n")
+        print("\nRunning Multi-Junction Simulation...\n")
 
-        for step in range(50):
+        event_names = {
+            0: "NORMAL",
+            1: "SLOW_TRAFFIC",
+            2: "CONGESTION",
+        }
 
-            # Move simulation by one step
-            env.simulation_step()
+        try:
 
-            # Collect Traffic Features
-            vehicle_count = collector.get_vehicle_count()
-            traffic_flow = collector.get_traffic_flow()
-            features = collector.collect_features()
+            for step in range(50):
 
-            # Display Live Data
-            print(
-                f"Step: {step:03d} | "
-                f"Vehicles: {vehicle_count:02d} | "
-                f"Traffic Flow: {traffic_flow}"
-            )
+                env.simulation_step()
 
-        # Close SUMO
-        env.disconnect()
+                junction_features = collector.collect_features()
+
+                print(f"\nStep: {step:03d}")
+
+                for junction_id, features in junction_features.items():
+
+                    vehicle_count = features["vehicle_count"]
+                    traffic_flow = features["traffic_flow"]
+                    event_type = features["traffic_event_type"]
+                    remaining_green_time = features["remaining_green_time"]
+                    downstream_occupancy = features["downstream_occupancy"]
+
+                    event_name = event_names.get(
+                        event_type,
+                        "UNKNOWN"
+                    )
+
+                    print(
+                        f"Junction: {junction_id} | "
+                        f"Vehicles: {vehicle_count:02d} | "
+                        f"Traffic Flow: {traffic_flow} | "
+                        f"Event: {event_name} | "
+                        f"Remaining Green Time: {remaining_green_time:.1f} | "
+                        f"Downstream Occupancy: {downstream_occupancy:.2f}"
+                    )
+
+        finally:
+
+            env.disconnect()
 
 
 if __name__ == "__main__":
