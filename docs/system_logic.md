@@ -217,9 +217,9 @@ data/processed/combined_traffic_dataset.csv
 
 ## 9. LSTM Traffic Prediction
 
-The LSTM model analyzes historical traffic patterns.
+The LSTM model analyzes historical junction-specific traffic patterns.
 
-Input:
+Input features:
 
 Traffic Flow
 
@@ -239,28 +239,85 @@ Prediction horizon:
 
 10 observations
 
-The LSTM predicts:
+The LSTM prediction target is:
 
 Future Queue Length
 
-Future Traffic Saturation
+Input tensor shape:
+
+(batch_size, 30, 5)
+
+Output tensor shape:
+
+(batch_size, 10, 1)
+
+The model predicts ten future queue length observations.
+
+Traffic saturation is not directly predicted by the LSTM.
+
+Saturation is calculated as a derived traffic control metric using the predicted queue length and the physical queue capacity of the active SUMO junction.
+
+### 10. Traffic Saturation
+
+Traffic saturation represents predicted queue pressure relative to the physical queue capacity of a signalized junction.
+
+The future queue sequence predicted by the LSTM is:
+
+Q = [q1, q2, q3, ..., q10]
+
+The following queue indicators are derived:
+
+Peak Predicted Queue:
+
+Q_peak = max(Q)
+
+Mean Predicted Queue:
+
+Q_mean = mean(Q)
+
+Final Predicted Queue:
+
+Q_final = q10
+
+Queue Growth:
+
+Q_growth = Q_final - q1
 
 
-## 10. Traffic Saturation
+### Dynamic Junction Queue Capacity
 
-Traffic saturation represents the congestion pressure of a junction.
+Junction queue capacity must be derived from the active SUMO network.
 
-The saturation value is derived using traffic conditions such as:
+For every controlled incoming lane:
 
-Queue Length
+Lane Capacity = floor(
+    Lane Length / Vehicle Space
+)
 
-Traffic Flow
+Vehicle Space represents the estimated physical road space occupied by one queued vehicle including its minimum gap.
 
-Downstream Occupancy
+Junction Capacity is calculated as:
 
-Lane Capacity
+Junction Capacity = Sum of Incoming Lane Capacities
 
-The final saturation calculation must be defined and validated before model training.
+No fixed junction capacity value should be manually hardcoded.
+
+
+### Saturation Calculation
+
+Peak Saturation:
+
+Peak Saturation = Q_peak / Junction Capacity
+
+Mean Saturation:
+
+Mean Saturation = Q_mean / Junction Capacity
+
+Saturation values are bounded between 0 and 1.
+
+If junction capacity is invalid or unavailable, the condition must be handled explicitly.
+
+The system must not silently substitute a manually predetermined capacity value.
 
 
 ## 11. DDQN Reinforcement Learning

@@ -18,17 +18,18 @@ PROJECT_ROOT = os.path.dirname(
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
+from config import (
+    PROCESSED_DATA_DIR,
+    DEFAULT_LOCATION_ID,
+    DATASET_FILENAME,
+    OBSERVATION_WINDOW,
+)
 from environment.sumo_env import SumoEnvironment
 from integration.collector import TrafficCollector
 from integration.pipeline import TrafficPipeline
-from config import PROCESSED_DATA_DIR
 
-
-LOCATION_ID = "location_1"
-
+LOCATION_ID = DEFAULT_LOCATION_ID
 SIMULATION_STEPS = 3600
-
-OBSERVATION_WINDOW = 60
 
 
 def save_dataset(rows, output_file):
@@ -47,9 +48,16 @@ def save_dataset(rows, output_file):
         "simulation_time",
         "vehicle_count",
         "traffic_flow",
+        "arrival_rate",
+        "departure_rate",
         "traffic_event_type",
         "remaining_green_time",
+        "current_signal_phase",
         "downstream_occupancy",
+        "downstream_queue_length",
+        "average_speed",
+        "waiting_time",
+        "travel_time",
         "queue_length",
     ]
 
@@ -120,7 +128,7 @@ def main():
 
     output_file = os.path.join(
         PROCESSED_DATA_DIR,
-        f"{LOCATION_ID}_dataset.csv"
+        DATASET_FILENAME,
     )
 
     save_dataset(
