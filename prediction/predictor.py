@@ -1,77 +1,183 @@
 ﻿"""
 Traffic Queue Length Predictor
 
-Loads trained LSTM model and scalers to predict future traffic target sequences.
+Loads the trained LSTM model and scalers to perform
+real-time traffic queue length prediction.
 """
 
-import pickle
-
+import joblib
 import numpy as np
 import torch
 
-from prediction.lstm import create_lstm_model
+from prediction.lstm import TrafficLSTM
 
 
 class TrafficPredictor:
 
-    def __init__(self, model_path, scaler_path):
+    def __init__(
+        self,
+        model_path="models/lstm_model.pth",
+        scaler_path="models/lstm_scalers.pkl",
+        input_size=12,
+        hidden_size=64,
+        num_layers=2,
+        prediction_horizon=10,
+        target_size=1,
+        dropout=0.2,
+    ):
+
         self.device = torch.device(
             "cuda" if torch.cuda.is_available() else "cpu"
         )
 
-        checkpoint = torch.load(
-            model_path,
-            map_location=self.device,
-            weights_only=False,
-        )
+        print(f"Using Device : {self.device}")
 
-        with open(scaler_path, "rb") as scaler_file:
-            scalers = pickle.load(scaler_file)
+        # --------------------------------------------------
+        # Load Scalers
+        # --------------------------------------------------
+
+        scalers = joblib.load(scaler_path)
 
         self.feature_scaler = scalers["feature_scaler"]
         self.target_scaler = scalers["target_scaler"]
-        self.lookback = checkpoint["lookback"]
-        self.feature_columns = checkpoint["feature_columns"]
-        self.target_columns = checkpoint["target_columns"]
 
-        self.model = create_lstm_model(
-            input_size=checkpoint["input_size"],
-            hidden_size=checkpoint["hidden_size"],
-            num_layers=checkpoint["num_layers"],
-            prediction_horizon=checkpoint["prediction_horizon"],
-            target_size=checkpoint["target_size"],
-            dropout=checkpoint["dropout"],
+        # --------------------------------------------------
+        # Build Model
+        # --------------------------------------------------
+
+        self.model = TrafficLSTM(
+            input_size=input_size,
+            hidden_size=hidden_size,
+            num_layers=num_layers,
+            prediction_horizon=prediction_horizon,
+            target_size=target_size,
+            dropout=dropout,
         ).to(self.device)
 
-        self.model.load_state_dict(checkpoint["model_state_dict"])
+        # --------------------------------------------------
+        # Load Weights
+        # --------------------------------------------------
+
+        self.model.load_state_dict(
+            torch.load(
+                model_path,
+                map_location=self.device,
+            )
+        )
+
         self.model.eval()
 
-    def validate_sequence(self, sequence):
+        self.lookback = prediction_horizon
+
+        self.input_size = input_size
+
+        print("LSTM Model Loaded Successfully.")
+
+    # ----------------------------------------------------------
+    # Validate Input
+    # ----------------------------------------------------------
+
+    def validate_input(self, sequence):
+
         sequence = np.asarray(sequence, dtype=np.float32)
-        expected_shape = (self.lookback, len(self.feature_columns))
+
+        expected_shape = (
+            self.lookback,
+            self.input_size,
+        )
+
         if sequence.shape != expected_shape:
+
             raise ValueError(
-                f"Invalid input sequence shape. "
-                f"Expected {expected_shape}, received {sequence.shape}"
+
+                f"Expected input shape {expected_shape}, "
+                f"received {sequence.shape}"
+
             )
+
         return sequence
 
+    # ----------------------------------------------------------
+    # Scale Input
+    # ----------------------------------------------------------
+
+    def preprocess(self, sequence):
+
+        sequence = self.validate_input(sequence)
+
+        scaled = self.feature_scaler.transform(sequence)
+
+        scaled = scaled.astype(np.float32)
+
+        scaled = np.expand_dims(scaled, axis=0)
+
+        return torch.tensor(
+            scaled,
+            dtype=torch.float32,
+            device=self.device,
+        )
+
+    # ----------------------------------------------------------
+    # Predict
+    # ----------------------------------------------------------
+
     def predict(self, sequence):
-        sequence = self.validate_sequence(sequence)
-        scaled_sequence = self.feature_scaler.transform(sequence).astype(np.float32)
-        input_tensor = torch.from_numpy(scaled_sequence).unsqueeze(0).to(self.device)
+
+        input_tensor = self.preprocess(sequence)
 
         with torch.no_grad():
-            scaled_prediction = self.model(input_tensor)
 
-        scaled_prediction = scaled_prediction.cpu().numpy()[0]
-        prediction = self.target_scaler.inverse_transform(scaled_prediction)
-        prediction = np.maximum(prediction, 0.0)
+            prediction = self.model(input_tensor)
+
+        prediction = prediction.squeeze(0).cpu().numpy()
+
+        prediction = self.target_scaler.inverse_transform(
+            prediction
+        )
+
+        prediction = np.maximum(
+            prediction,
+            0
+        )
+
         return prediction
 
+    # ----------------------------------------------------------
+    # Queue Length Prediction
+    # ----------------------------------------------------------
+
     def predict_queue_length(self, sequence):
+
         prediction = self.predict(sequence)
+
         return prediction[:, 0]
 
+    # ----------------------------------------------------------
+    # Future Targets
+    # ----------------------------------------------------------
+
     def predict_future_targets(self, sequence):
+
         return self.predict(sequence)
+
+
+# ==========================================================
+# Test
+# ==========================================================
+
+if __name__ == "__main__":
+
+    predictor = TrafficPredictor()
+
+    dummy_sequence = np.random.rand(
+        10,
+        12,
+    ).astype(np.float32)
+
+    prediction = predictor.predict_queue_length(
+        dummy_sequence
+    )
+
+    print("\nPredicted Queue Length")
+
+    print(prediction)

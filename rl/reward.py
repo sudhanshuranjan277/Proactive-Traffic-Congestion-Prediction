@@ -6,6 +6,8 @@ The reward is calculated from real
 consecutive SUMO traffic observations.
 """
 
+from integration.collector import TrafficCollector
+from integration.controller import TrafficSignalAction
 from config import (
     REWARD_QUEUE_WEIGHT,
     REWARD_WAITING_TIME_WEIGHT,
@@ -152,25 +154,25 @@ def compute_reward(
         * speed_improvement
     )
 
-    if traffic_event_type == 1:
+    if traffic_event_type == TrafficCollector.EVENT_SLOW_TRAFFIC:
 
         reward -= (
             REWARD_SLOW_TRAFFIC_PENALTY
         )
 
-    elif traffic_event_type == 2:
+    elif traffic_event_type == TrafficCollector.EVENT_CONGESTION:
 
         reward -= (
             REWARD_CONGESTION_PENALTY
         )
 
-    if action == 1:
+    if action == TrafficSignalAction.EXTEND_CURRENT_PHASE:
 
         reward -= (
             REWARD_EXTEND_PENALTY
         )
 
-    elif action == 2:
+    elif action == TrafficSignalAction.MOVE_TO_NEXT_PHASE:
 
         reward -= (
             REWARD_NEXT_PHASE_PENALTY

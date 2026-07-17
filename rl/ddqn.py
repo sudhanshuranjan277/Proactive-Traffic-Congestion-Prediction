@@ -17,6 +17,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+from config import (
+    FORCE_CPU,
+    DDQN_GRADIENT_CLIP_NORM,
+    EPSILON_MIN,
+    EPSILON_MAX,
+)
 from rl.memory import ReplayMemory
 from rl.model import QNetwork
 
@@ -37,15 +43,17 @@ class DDQNAgent:
         Initialize the Double Deep Q-Network agent.
         """
 
-        self.device = (
-            device
-            if device is not None
-            else torch.device(
-                "cuda"
-                if torch.cuda.is_available()
-                else "cpu"
-            )
-        )
+        if device is None:
+            if FORCE_CPU:
+                device = torch.device("cpu")
+            else:
+                device = torch.device(
+                    "cuda"
+                    if torch.cuda.is_available()
+                    else "cpu"
+                )
+
+        self.device = device
 
         self.state_dim = int(state_dim)
         self.action_dim = int(action_dim)
@@ -130,8 +138,8 @@ class DDQNAgent:
         epsilon = float(
             np.clip(
                 epsilon,
-                0.0,
-                1.0,
+                EPSILON_MIN,
+                EPSILON_MAX,
             )
         )
 
@@ -327,7 +335,7 @@ class DDQNAgent:
 
         nn.utils.clip_grad_norm_(
             self.online_net.parameters(),
-            max_norm=1.0,
+            max_norm=DDQN_GRADIENT_CLIP_NORM,
         )
 
         self.optimizer.step()

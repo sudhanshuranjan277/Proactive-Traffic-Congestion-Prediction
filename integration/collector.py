@@ -22,6 +22,14 @@ Current Features:
 
 import traci
 
+from config import (
+    COLLECTOR_STOPPED_SPEED_THRESHOLD,
+    COLLECTOR_CONGESTION_STOPPED_VEHICLES,
+    COLLECTOR_CONGESTION_SPEED_THRESHOLD,
+    COLLECTOR_SLOW_TRAFFIC_SPEED_THRESHOLD,
+    COLLECTOR_ROUNDING_PRECISION,
+)
+
 
 class TrafficCollector:
 
@@ -29,15 +37,6 @@ class TrafficCollector:
     EVENT_NORMAL = 0
     EVENT_SLOW_TRAFFIC = 1
     EVENT_CONGESTION = 2
-
-    # Default thresholds used to classify traffic events and to
-    # round collected metrics. All are overridable per-instance so
-    # tuning doesn't require editing method bodies.
-    DEFAULT_STOPPED_SPEED_THRESHOLD = 0.1  # m/s below which a vehicle counts as "stopped"
-    DEFAULT_CONGESTION_STOPPED_VEHICLES = 5  # stopped-vehicle count that can trigger congestion
-    DEFAULT_CONGESTION_SPEED_THRESHOLD = 3  # m/s; combined with stopped-vehicle count for congestion
-    DEFAULT_SLOW_TRAFFIC_SPEED_THRESHOLD = 8  # m/s below which traffic is classified as slow
-    DEFAULT_ROUNDING_PRECISION = 2
 
     def __init__(
         self,
@@ -56,31 +55,31 @@ class TrafficCollector:
         self.stopped_speed_threshold = (
             stopped_speed_threshold
             if stopped_speed_threshold is not None
-            else self.DEFAULT_STOPPED_SPEED_THRESHOLD
+            else COLLECTOR_STOPPED_SPEED_THRESHOLD
         )
 
         self.congestion_stopped_vehicles = (
             congestion_stopped_vehicles
             if congestion_stopped_vehicles is not None
-            else self.DEFAULT_CONGESTION_STOPPED_VEHICLES
+            else COLLECTOR_CONGESTION_STOPPED_VEHICLES
         )
 
         self.congestion_speed_threshold = (
             congestion_speed_threshold
             if congestion_speed_threshold is not None
-            else self.DEFAULT_CONGESTION_SPEED_THRESHOLD
+            else COLLECTOR_CONGESTION_SPEED_THRESHOLD
         )
 
         self.slow_traffic_speed_threshold = (
             slow_traffic_speed_threshold
             if slow_traffic_speed_threshold is not None
-            else self.DEFAULT_SLOW_TRAFFIC_SPEED_THRESHOLD
+            else COLLECTOR_SLOW_TRAFFIC_SPEED_THRESHOLD
         )
 
         self.rounding_precision = (
             rounding_precision
             if rounding_precision is not None
-            else self.DEFAULT_ROUNDING_PRECISION
+            else COLLECTOR_ROUNDING_PRECISION
         )
 
     def initialize_junctions(self):

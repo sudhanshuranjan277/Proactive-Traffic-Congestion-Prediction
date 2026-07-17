@@ -20,6 +20,11 @@ Reward
 
 import numpy as np
 
+from config import (
+    INPUT_FEATURES,
+    CURRENT_STATE_FEATURES,
+    FUTURE_FEATURE_STATS,
+)
 from integration.pipeline import TrafficPipeline
 from integration.controller import TrafficSignalController
 from rl.reward import compute_reward
@@ -27,53 +32,15 @@ from rl.reward import compute_reward
 
 class JunctionTrafficEnvironment:
 
-    # Default feature configuration. All of these can be overridden via the
+    # Default feature configuration from config.
+    # All of these can be overridden via the
     # constructor so nothing about the state/prediction shape is fixed in
     # the method bodies below.
-    DEFAULT_INPUT_FEATURES = [
-        "traffic_flow",
-        "traffic_event_type",
-        "remaining_green_time",
-        "downstream_occupancy",
-        "queue_length",
-        "average_speed",
-        "waiting_time",
-        "current_signal_phase",
-        "downstream_queue_length",
-        "travel_time",
-        "arrival_rate",
-        "departure_rate",
-    ]
+    DEFAULT_INPUT_FEATURES = INPUT_FEATURES
 
-    DEFAULT_TARGET_FEATURES = [
-        "queue_length",
-        "downstream_occupancy",
-        "average_speed",
-        "waiting_time",
-    ]
+    DEFAULT_CURRENT_STATE_FEATURES = CURRENT_STATE_FEATURES
 
-    # Features pulled straight from the current row into the state vector.
-    DEFAULT_CURRENT_STATE_FEATURES = [
-        "traffic_flow",
-        "remaining_green_time",
-        "downstream_occupancy",
-        "queue_length",
-        "average_speed",
-        "waiting_time",
-        "downstream_queue_length",
-        "arrival_rate",
-        "departure_rate",
-    ]
-
-    # For each target/predicted feature, which aggregations over the
-    # prediction horizon get appended to the state. Supported stats:
-    # "mean", "max", "min", "delta" (last - first).
-    DEFAULT_FUTURE_FEATURE_STATS = {
-        "queue_length": ["mean", "max", "delta"],
-        "downstream_occupancy": ["mean", "max"],
-        "average_speed": ["mean"],
-        "waiting_time": ["mean", "max"],
-    }
+    DEFAULT_FUTURE_FEATURE_STATS = FUTURE_FEATURE_STATS
 
     _STAT_FUNCS = {
         "mean": lambda arr: float(np.mean(arr)),
@@ -125,7 +92,7 @@ class JunctionTrafficEnvironment:
         self.target_features = (
             target_features
             if target_features is not None
-            else list(self.DEFAULT_TARGET_FEATURES)
+            else list(INPUT_FEATURES)[-4:]
         )
 
         self.current_state_features = (

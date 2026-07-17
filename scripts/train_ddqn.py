@@ -70,6 +70,8 @@ from config import (
     LSTM_SCALER_FILENAME,
     DDQN_MODEL_FILENAME,
     DEFAULT_LOCATION_ID,
+    PRINT_WIDTH,
+    CURRENT_STATE_FEATURES,
 )
 
 from environment.sumo_env import (
@@ -284,7 +286,7 @@ def main():
     )
 
     print(
-        "=" * 60
+        "=" * PRINT_WIDTH
     )
 
     print(
@@ -292,7 +294,7 @@ def main():
     )
 
     print(
-        "=" * 60
+        "=" * PRINT_WIDTH
     )
 
     print(
@@ -336,7 +338,7 @@ def main():
     )
 
     print(
-        "=" * 60
+        "=" * PRINT_WIDTH
     )
 
     sumo_env.show_configuration()
@@ -405,20 +407,6 @@ def main():
         action_dim = int(
             RL_NUM_ACTIONS
         )
-
-        if state_dim != 17:
-            raise ValueError(
-                "Unexpected DDQN state dimension. "
-                f"Expected 17, received "
-                f"{state_dim}."
-            )
-
-        if action_dim != 3:
-            raise ValueError(
-                "Unexpected DDQN action dimension. "
-                f"Expected 3, received "
-                f"{action_dim}."
-            )
 
         print(
             "\nEnvironment Validation"
@@ -505,7 +493,7 @@ def main():
 
             print(
                 "\n"
-                + "-" * 60
+                + "-" * PRINT_WIDTH
             )
 
             print(
@@ -520,7 +508,7 @@ def main():
             )
 
             print(
-                "-" * 60
+                "-" * PRINT_WIDTH
             )
 
             for episode_step in range(
@@ -695,7 +683,7 @@ def main():
 
         print(
             "\n"
-            + "=" * 60
+            + "=" * PRINT_WIDTH
         )
 
         print(
@@ -703,7 +691,7 @@ def main():
         )
 
         print(
-            "=" * 60
+            "=" * PRINT_WIDTH
         )
 
         print(

@@ -118,6 +118,44 @@ TARGET_COLUMNS = [
     "waiting_time",
 ]
 
+# ======================================
+# RL Environment Features
+# ======================================
+
+INPUT_FEATURES = [
+    "traffic_flow",
+    "traffic_event_type",
+    "remaining_green_time",
+    "downstream_occupancy",
+    "queue_length",
+    "average_speed",
+    "waiting_time",
+    "current_signal_phase",
+    "downstream_queue_length",
+    "travel_time",
+    "arrival_rate",
+    "departure_rate",
+]
+
+CURRENT_STATE_FEATURES = [
+    "traffic_flow",
+    "remaining_green_time",
+    "downstream_occupancy",
+    "queue_length",
+    "average_speed",
+    "waiting_time",
+    "downstream_queue_length",
+    "arrival_rate",
+    "departure_rate",
+]
+
+FUTURE_FEATURE_STATS = {
+    "queue_length": ["mean", "max", "delta"],
+    "downstream_occupancy": ["mean", "max"],
+    "average_speed": ["mean"],
+    "waiting_time": ["mean", "max"],
+}
+
 
 # ======================================
 # LSTM Training
@@ -186,6 +224,53 @@ REWARD_EXTEND_PENALTY = 0.02
 REWARD_NEXT_PHASE_PENALTY = 0.05
 
 REWARD_INVALID_ACTION_PENALTY = 0.50
+
+
+# ======================================
+# DDQN Network Architecture
+# ======================================
+
+DDQN_HIDDEN_DIM = 128
+
+DDQN_GRADIENT_CLIP_NORM = 1.0
+
+
+# ======================================
+# Device Configuration
+# ======================================
+
+FORCE_CPU = False
+
+
+# ======================================
+# Output Formatting
+# ======================================
+
+PRINT_WIDTH = 60
+
+
+# ======================================
+# Gradient and Epsilon Bounds
+# ======================================
+
+EPSILON_MIN = 0.0
+
+EPSILON_MAX = 1.0
+
+
+# ======================================
+# Traffic Collector Thresholds
+# ======================================
+
+COLLECTOR_STOPPED_SPEED_THRESHOLD = 0.1
+
+COLLECTOR_CONGESTION_STOPPED_VEHICLES = 5
+
+COLLECTOR_CONGESTION_SPEED_THRESHOLD = 3
+
+COLLECTOR_SLOW_TRAFFIC_SPEED_THRESHOLD = 8
+
+COLLECTOR_ROUNDING_PRECISION = 2
 
 
 # ======================================
