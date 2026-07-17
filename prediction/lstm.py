@@ -13,11 +13,11 @@ class TrafficLSTM(nn.Module):
 
     def __init__(
         self,
-        input_size=5,
+        input_size,
+        target_size,
         hidden_size=64,
         num_layers=2,
         prediction_horizon=10,
-        target_size=1,
         dropout=0.2,
     ):
 
@@ -44,13 +44,7 @@ class TrafficLSTM(nn.Module):
         )
 
     def forward(self, x):
-        """
-        Input:
-            [batch_size, lookback, input_size]
-
-        Output:
-            [batch_size, prediction_horizon, target_size]
-        """
+       
 
         lstm_output, _ = self.lstm(x)
 
@@ -69,23 +63,11 @@ class TrafficLSTM(nn.Module):
         return predictions
 
 
-def create_lstm_model(
-    input_size=5,
-    hidden_size=64,
-    num_layers=2,
-    prediction_horizon=10,
-    target_size=1,
-    dropout=0.2,
-):
-    """
-    Create Traffic LSTM model.
-    """
+def create_lstm_model(input_size, target_size, **kwargs):
+  
 
     return TrafficLSTM(
         input_size=input_size,
-        hidden_size=hidden_size,
-        num_layers=num_layers,
-        prediction_horizon=prediction_horizon,
         target_size=target_size,
-        dropout=dropout,
+        **kwargs,
     )

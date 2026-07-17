@@ -7,8 +7,7 @@
 
     <input>
         <net-file value="osm.net.xml.gz"/>
-        <route-files value="osm.passenger.trips.xml,osm_pt.rou.xml"/>
-<additional-files value="osm_stops.add.xml,output.add.xml,detectors.add.xml"/>    </input>
+<route-files value="scenario_passenger.trips.xml,osm_pt.rou.xml"/><additional-files value="osm_stops.add.xml,output.add.xml,detectors.add.xml"/>    </input>
 
     <output>
         <tripinfo-output value="tripinfos.xml"/>
