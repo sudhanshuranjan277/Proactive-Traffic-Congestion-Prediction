@@ -1,4 +1,4 @@
-﻿"""
+"""
 Traffic Predictor
 
 Loads the trained LSTM model checkpoint produced by

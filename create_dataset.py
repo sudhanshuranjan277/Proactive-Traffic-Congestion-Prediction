@@ -5,11 +5,17 @@ Runs SUMO simulation and generates
 dataset-ready traffic observations using:
 
 SUMO -> TraCI -> Collector -> Pipeline -> CSV
+
+Supports generating multiple independent episodes (different demand
+each time, via scripts/generate_traffic_demand.py --seed) into
+separate output files, which scripts/merge_datasets.py can then
+combine into one larger training dataset.
 """
 
 import os
 import sys
 import csv
+import argparse
 
 PROJECT_ROOT = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
@@ -23,13 +29,44 @@ from config import (
     DEFAULT_LOCATION_ID,
     DATASET_FILENAME,
     OBSERVATION_WINDOW,
+    SIMULATION_TIME,
 )
 from environment.sumo_env import SumoEnvironment
 from integration.collector import TrafficCollector
 from integration.pipeline import TrafficPipeline
 
-LOCATION_ID = DEFAULT_LOCATION_ID
-SIMULATION_STEPS = 3600
+SIMULATION_STEPS = SIMULATION_TIME
+
+
+def parse_args():
+
+    parser = argparse.ArgumentParser(
+        description="Generate a traffic dataset from a SUMO simulation run."
+    )
+
+    parser.add_argument(
+        "--location-id",
+        default=DEFAULT_LOCATION_ID,
+        help=(
+            "Location ID written into every row (default: "
+            f"'{DEFAULT_LOCATION_ID}' from config.py). Use a different "
+            "value for each independent episode so preprocessing.py "
+            "never mixes rows from different runs into one sequence."
+        ),
+    )
+
+    parser.add_argument(
+        "--output",
+        default=None,
+        help=(
+            "Output CSV path. Defaults to "
+            f"'{DATASET_FILENAME}' under PROCESSED_DATA_DIR, but with "
+            "--location-id set, defaults to '<location-id>_dataset.csv' "
+            "instead, so repeated runs don't overwrite each other."
+        ),
+    )
+
+    return parser.parse_args()
 
 
 def save_dataset(rows, output_file):
@@ -79,13 +116,30 @@ def save_dataset(rows, output_file):
 
 def main():
 
+    args = parse_args()
+
+    location_id = args.location_id
+
+    if args.output:
+        output_file = args.output
+    elif location_id != DEFAULT_LOCATION_ID:
+        output_file = os.path.join(
+            PROCESSED_DATA_DIR,
+            f"{location_id}_dataset.csv",
+        )
+    else:
+        output_file = os.path.join(
+            PROCESSED_DATA_DIR,
+            DATASET_FILENAME,
+        )
+
     env = SumoEnvironment()
 
     collector = TrafficCollector()
 
     pipeline = TrafficPipeline(
         collector=collector,
-        location_id=LOCATION_ID,
+        location_id=location_id,
         observation_window=OBSERVATION_WINDOW,
     )
 
@@ -100,7 +154,7 @@ def main():
 
     print(
         f"\nGenerating dataset for "
-        f"{LOCATION_ID}...\n"
+        f"{location_id}...\n"
     )
 
     try:
@@ -125,11 +179,6 @@ def main():
     finally:
 
         env.disconnect()
-
-    output_file = os.path.join(
-        PROCESSED_DATA_DIR,
-        DATASET_FILENAME,
-    )
 
     save_dataset(
         dataset_rows,

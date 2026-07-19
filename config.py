@@ -85,7 +85,14 @@ SIMULATION_STEP = 1
 
 SIMULATION_TIME = 3600
 
-OBSERVATION_WINDOW = 60
+# Lowered from 60 -> 15: each simulation run now emits ~4x more
+# observation rows (one row every 15s instead of every 60s), directly
+# addressing small-dataset issues (168 sequences from one run was too
+# few — see Phase 1 accuracy diagnosis). Rates like arrival_rate /
+# departure_rate are computed per-window internally, so this changes
+# the time resolution of a "step", not any downstream code — nothing
+# hardcodes the old value of 60 elsewhere (verified).
+OBSERVATION_WINDOW = 15
 
 
 # ======================================
@@ -300,6 +307,52 @@ LSTM_SCALER_FILENAME = (
 DDQN_MODEL_FILENAME = (
     "ddqn_agent.pth"
 )
+
+
+# ======================================
+# Traffic Event Types
+# (from architecture diagram — used to decode
+# the raw traffic_event_type integer for display)
+# ======================================
+
+TRAFFIC_EVENT_TYPES = {
+    0: "Normal Traffic",
+    1: "Accident",
+    2: "Road Maintenance",
+    3: "Emergency Vehicle",
+    4: "Special Event",
+}
+
+
+# ======================================
+# Real-Time Engine (live dashboard)
+# ======================================
+
+# Seconds of real wall-clock delay per simulated second, so a live
+# demo plays out visibly over time instead of finishing in a couple
+# of seconds. 3600 simulated seconds * 0.1 = 360s (~6 min) real time.
+REALTIME_STEP_DELAY_SECONDS = 0.1
+
+# How many recent per-junction observations the frontend keeps for
+# trend charts (separate from LOOKBACK, which is only for the LSTM).
+REALTIME_HISTORY_LENGTH = 200
+
+
+# ======================================
+# API / Backend
+# ======================================
+
+API_HOST = "127.0.0.1"
+
+API_PORT = 8000
+
+API_BASE_URL = f"http://{API_HOST}:{API_PORT}"
+
+# How often (seconds) the WebSocket checks for a new snapshot to push,
+# and how often the Streamlit frontend polls the REST API as a fallback.
+WEBSOCKET_POLL_INTERVAL_SECONDS = 0.5
+
+FRONTEND_REFRESH_INTERVAL_MS = 1000
 
 
 ## Create Required Directories
