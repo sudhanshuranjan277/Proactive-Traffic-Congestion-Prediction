@@ -52,6 +52,15 @@ OUTPUT_DIR = os.path.join(
     "outputs",
 )
 
+# Matches RESULTS_DIR in evaluation/evaluate_controller.py and
+# evaluation/compare_models.py exactly — where fixed_evaluation.csv,
+# proactive_evaluation.csv, fixed_metrics.csv, proactive_metrics.csv,
+# and controller_comparison.csv are written/read.
+EVALUATION_RESULTS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "results",
+)
+
 MAP_DIR = os.path.join(
     PROJECT_ROOT,
     "maps",
