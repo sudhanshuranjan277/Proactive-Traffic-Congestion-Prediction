@@ -8,7 +8,8 @@ and Adaptive Traffic Signal Control System
 import os
 
 
-## Project Information
+# ======================================
+# Project Information
 # ======================================
 
 PROJECT_NAME = (
@@ -17,11 +18,12 @@ PROJECT_NAME = (
 
 AUTHOR = "Sudhanshu Ranjan"
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 
 
+# ======================================
 # Project Directories
-
+# ======================================
 
 PROJECT_ROOT = os.path.dirname(
     os.path.abspath(__file__)
@@ -52,10 +54,44 @@ OUTPUT_DIR = os.path.join(
     "outputs",
 )
 
-# Matches RESULTS_DIR in evaluation/evaluate_controller.py and
-# evaluation/compare_models.py exactly — where fixed_evaluation.csv,
-# proactive_evaluation.csv, fixed_metrics.csv, proactive_metrics.csv,
-# and controller_comparison.csv are written/read.
+# ======================================
+# Output Directories
+# ======================================
+
+GRAPHS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "graphs",
+)
+
+LOGS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "logs",
+)
+
+METRICS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "metrics",
+)
+
+REPORTS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "reports",
+)
+
+PREDICTIONS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "predictions",
+)
+
+CHECKPOINTS_DIR = os.path.join(
+    OUTPUT_DIR,
+    "checkpoints",
+)
+
+# ======================================
+# Evaluation
+# ======================================
+
 EVALUATION_RESULTS_DIR = os.path.join(
     OUTPUT_DIR,
     "results",
@@ -94,13 +130,6 @@ SIMULATION_STEP = 1
 
 SIMULATION_TIME = 3600
 
-# Lowered from 60 -> 15: each simulation run now emits ~4x more
-# observation rows (one row every 15s instead of every 60s), directly
-# addressing small-dataset issues (168 sequences from one run was too
-# few — see Phase 1 accuracy diagnosis). Rates like arrival_rate /
-# departure_rate are computed per-window internally, so this changes
-# the time resolution of a "step", not any downstream code — nothing
-# hardcodes the old value of 60 elsewhere (verified).
 OBSERVATION_WINDOW = 15
 
 
@@ -134,8 +163,9 @@ TARGET_COLUMNS = [
     "waiting_time",
 ]
 
+
 # ======================================
-# RL Environment Features
+# RL Input Features
 # ======================================
 
 INPUT_FEATURES = [
@@ -183,13 +213,21 @@ LSTM_HIDDEN_SIZE = 64
 
 LSTM_NUM_LAYERS = 2
 
-LSTM_DROPOUT = 0.2
+LSTM_DROPOUT = 0.20
 
 LSTM_BATCH_SIZE = 32
 
 LSTM_EPOCHS = 50
 
 LSTM_LEARNING_RATE = 0.001
+
+LSTM_WEIGHT_DECAY = 1e-5
+
+EARLY_STOPPING_PATIENCE = 10
+
+MIN_DELTA = 1e-4
+
+SAVE_BEST_MODEL_ONLY = True
 
 
 # ======================================
@@ -219,7 +257,9 @@ RL_MAX_EPISODES = 5
 RL_MAX_STEPS_PER_EPISODE = 30
 
 
+# ======================================
 # Reward Configuration
+# ======================================
 
 REWARD_QUEUE_WEIGHT = 1.00
 
@@ -241,7 +281,6 @@ REWARD_NEXT_PHASE_PENALTY = 0.05
 
 REWARD_INVALID_ACTION_PENALTY = 0.50
 
-
 # ======================================
 # DDQN Network Architecture
 # ======================================
@@ -249,6 +288,10 @@ REWARD_INVALID_ACTION_PENALTY = 0.50
 DDQN_HIDDEN_DIM = 128
 
 DDQN_GRADIENT_CLIP_NORM = 1.0
+
+DDQN_TARGET_SYNC_INTERVAL = 10
+
+DDQN_SAVE_INTERVAL = 1
 
 
 # ======================================
@@ -263,6 +306,10 @@ FORCE_CPU = False
 # ======================================
 
 PRINT_WIDTH = 60
+
+LOG_LEVEL = "INFO"
+
+ENABLE_PROGRESS_BAR = True
 
 
 # ======================================
@@ -296,8 +343,9 @@ COLLECTOR_ROUNDING_PRECISION = 2
 RANDOM_SEED = 42
 
 
-## Dataset and Model Files
-
+# ======================================
+# Dataset / Model Files
+# ======================================
 
 DEFAULT_LOCATION_ID = "location_1"
 
@@ -317,11 +365,41 @@ DDQN_MODEL_FILENAME = (
     "ddqn_agent.pth"
 )
 
+TRAINING_HISTORY_FILENAME = (
+    "training_history.csv"
+)
+
+METRICS_FILENAME = (
+    "lstm_metrics.csv"
+)
+
+PREDICTIONS_FILENAME = (
+    "prediction_results.csv"
+)
+
+LOSS_CURVE_FILENAME = (
+    "loss_curve.png"
+)
+
+ACTUAL_VS_PREDICTED_FILENAME = (
+    "actual_vs_predicted.png"
+)
+
+RESIDUAL_PLOT_FILENAME = (
+    "residual_plot.png"
+)
+
+RESIDUAL_HISTOGRAM_FILENAME = (
+    "residual_histogram.png"
+)
+
+TRAINING_REPORT_FILENAME = (
+    "lstm_training_report.pdf"
+)
+
 
 # ======================================
 # Traffic Event Types
-# (from architecture diagram — used to decode
-# the raw traffic_event_type integer for display)
 # ======================================
 
 TRAFFIC_EVENT_TYPES = {
@@ -334,21 +412,16 @@ TRAFFIC_EVENT_TYPES = {
 
 
 # ======================================
-# Real-Time Engine (live dashboard)
+# Real-Time Engine
 # ======================================
 
-# Seconds of real wall-clock delay per simulated second, so a live
-# demo plays out visibly over time instead of finishing in a couple
-# of seconds. 3600 simulated seconds * 0.1 = 360s (~6 min) real time.
 REALTIME_STEP_DELAY_SECONDS = 0.1
 
-# How many recent per-junction observations the frontend keeps for
-# trend charts (separate from LOOKBACK, which is only for the LSTM).
 REALTIME_HISTORY_LENGTH = 200
 
 
 # ======================================
-# API / Backend
+# API Configuration
 # ======================================
 
 API_HOST = "127.0.0.1"
@@ -357,24 +430,108 @@ API_PORT = 8000
 
 API_BASE_URL = f"http://{API_HOST}:{API_PORT}"
 
-# How often (seconds) the WebSocket checks for a new snapshot to push,
-# and how often the Streamlit frontend polls the REST API as a fallback.
 WEBSOCKET_POLL_INTERVAL_SECONDS = 0.5
 
 FRONTEND_REFRESH_INTERVAL_MS = 1000
 
 
-## Create Required Directories
-#
+# ======================================
+# Dashboard
+# ======================================
+
+DASHBOARD_TITLE = (
+    "AI Traffic Monitoring Dashboard"
+)
+
+MAX_GRAPH_POINTS = 200
+
+AUTO_REFRESH_SECONDS = 1
+
+
+# ======================================
+# File Paths
+# ======================================
+
+DATASET_PATH = os.path.join(
+    PROCESSED_DATA_DIR,
+    DATASET_FILENAME,
+)
+
+LSTM_MODEL_PATH = os.path.join(
+    MODEL_DIR,
+    LSTM_MODEL_FILENAME,
+)
+
+LSTM_SCALER_PATH = os.path.join(
+    MODEL_DIR,
+    LSTM_SCALER_FILENAME,
+)
+
+DDQN_MODEL_PATH = os.path.join(
+    MODEL_DIR,
+    DDQN_MODEL_FILENAME,
+)
+
+TRAINING_HISTORY_PATH = os.path.join(
+    LOGS_DIR,
+    TRAINING_HISTORY_FILENAME,
+)
+
+METRICS_PATH = os.path.join(
+    METRICS_DIR,
+    METRICS_FILENAME,
+)
+
+PREDICTIONS_PATH = os.path.join(
+    PREDICTIONS_DIR,
+    PREDICTIONS_FILENAME,
+)
+
+LOSS_CURVE_PATH = os.path.join(
+    GRAPHS_DIR,
+    LOSS_CURVE_FILENAME,
+)
+
+ACTUAL_VS_PREDICTED_PATH = os.path.join(
+    GRAPHS_DIR,
+    ACTUAL_VS_PREDICTED_FILENAME,
+)
+
+RESIDUAL_PLOT_PATH = os.path.join(
+    GRAPHS_DIR,
+    RESIDUAL_PLOT_FILENAME,
+)
+
+RESIDUAL_HISTOGRAM_PATH = os.path.join(
+    GRAPHS_DIR,
+    RESIDUAL_HISTOGRAM_FILENAME,
+)
+
+TRAINING_REPORT_PATH = os.path.join(
+    REPORTS_DIR,
+    TRAINING_REPORT_FILENAME,
+)
+
+
+# ======================================
+# Create Required Directories
+# ======================================
+
 for directory in [
     DATA_DIR,
     RAW_DATA_DIR,
     PROCESSED_DATA_DIR,
     MODEL_DIR,
     OUTPUT_DIR,
+    GRAPHS_DIR,
+    LOGS_DIR,
+    METRICS_DIR,
+    REPORTS_DIR,
+    PREDICTIONS_DIR,
+    CHECKPOINTS_DIR,
+    EVALUATION_RESULTS_DIR,
     EVALUATION_DIR,
 ]:
-
     os.makedirs(
         directory,
         exist_ok=True,
