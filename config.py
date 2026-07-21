@@ -117,7 +117,7 @@ SUMO_BINARY = "sumo"
 SUMO_CONFIG = os.path.join(
     PROJECT_ROOT,
     "maps",
-    "osm",
+    "location_2",
     "osm.sumocfg",
 )
 
@@ -422,7 +422,7 @@ def seed_everything(seed=RANDOM_SEED):
 # Dataset / Model Files
 # ======================================
 
-DEFAULT_LOCATION_ID = "location_1"
+DEFAULT_LOCATION_ID = "location_2"
 
 DATASET_FILENAME = (
     f"{DEFAULT_LOCATION_ID}_dataset.csv"
