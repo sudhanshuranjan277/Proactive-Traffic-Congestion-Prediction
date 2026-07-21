@@ -13,12 +13,12 @@ import os
 # ======================================
 
 PROJECT_NAME = (
-    "Proactive Traffic Congestion Prediction"
+    "Proactive Traffic Congestion Prediction and Adaptive Traffic Signal Control using Graph Deep Learning"
 )
 
 AUTHOR = "Sudhanshu Ranjan"
 
-VERSION = "1.1.0"
+VERSION = "2.0.0"
 
 
 # ======================================
@@ -165,6 +165,29 @@ TARGET_COLUMNS = [
 
 
 # ======================================
+# Model Selection
+# ======================================
+
+BASELINE_MODEL = "LSTM"
+
+GRAPH_MODEL = "GraphTransformer"
+
+AVAILABLE_MODELS = [
+    "Persistence",
+    "LSTM",
+    "GraphTransformer",
+]
+
+GRAPH_SEQUENCE_LENGTH = LOOKBACK
+
+GRAPH_NUM_TARGETS = len(TARGET_COLUMNS)
+
+GRAPH_NUM_FEATURES = len(FEATURE_COLUMNS)
+
+USE_GRAPH_TRANSFORMER = True
+
+
+# ======================================
 # RL Input Features
 # ======================================
 
@@ -228,6 +251,34 @@ EARLY_STOPPING_PATIENCE = 10
 MIN_DELTA = 1e-4
 
 SAVE_BEST_MODEL_ONLY = True
+
+
+# ======================================
+# Graph Transformer Training
+# (multi-junction joint prediction — see prediction/gnn_model.py)
+# ======================================
+
+GNN_HIDDEN_SIZE = 64
+
+GNN_NUM_LAYERS = 2
+
+GNN_NUM_HEADS = 4
+
+GNN_NUM_ATTENTION_LAYERS = 2
+
+GNN_DROPOUT = 0.20
+
+GNN_BATCH_SIZE = 16
+
+GNN_EPOCHS = 50
+
+GNN_LEARNING_RATE = 0.001
+
+GNN_WEIGHT_DECAY = 1e-5
+
+GNN_MODEL_FILENAME = "gnn_model.pth"
+
+GNN_SCALER_FILENAME = "gnn_scalers.pkl"
 
 
 # ======================================
@@ -300,6 +351,14 @@ DDQN_SAVE_INTERVAL = 1
 
 FORCE_CPU = False
 
+import torch
+
+DEVICE = (
+    "cpu"
+    if FORCE_CPU
+    else "cuda" if torch.cuda.is_available() else "cpu"
+)
+
 
 # ======================================
 # Output Formatting
@@ -341,6 +400,22 @@ COLLECTOR_ROUNDING_PRECISION = 2
 # ======================================
 
 RANDOM_SEED = 42
+
+
+def seed_everything(seed=RANDOM_SEED):
+
+    import random
+    import numpy as np
+    import torch
+
+    random.seed(seed)
+
+    np.random.seed(seed)
+
+    torch.manual_seed(seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 
 # ======================================
@@ -462,6 +537,20 @@ LSTM_MODEL_PATH = os.path.join(
     LSTM_MODEL_FILENAME,
 )
 
+# ======================================
+# Graph Transformer File Paths
+# ======================================
+
+GNN_MODEL_PATH = os.path.join(
+    MODEL_DIR,
+    GNN_MODEL_FILENAME,
+)
+
+GNN_SCALER_PATH = os.path.join(
+    MODEL_DIR,
+    GNN_SCALER_FILENAME,
+)
+
 LSTM_SCALER_PATH = os.path.join(
     MODEL_DIR,
     LSTM_SCALER_FILENAME,
@@ -480,6 +569,15 @@ TRAINING_HISTORY_PATH = os.path.join(
 METRICS_PATH = os.path.join(
     METRICS_DIR,
     METRICS_FILENAME,
+)
+
+GNN_METRICS_FILENAME = (
+    "gnn_metrics.csv"
+)
+
+GNN_METRICS_PATH = os.path.join(
+    METRICS_DIR,
+    GNN_METRICS_FILENAME,
 )
 
 PREDICTIONS_PATH = os.path.join(
@@ -510,6 +608,20 @@ RESIDUAL_HISTOGRAM_PATH = os.path.join(
 TRAINING_REPORT_PATH = os.path.join(
     REPORTS_DIR,
     TRAINING_REPORT_FILENAME,
+)
+
+GNN_CHECKPOINT_PATH = os.path.join(
+    CHECKPOINTS_DIR,
+    GNN_MODEL_FILENAME,
+)
+
+COMPARISON_REPORT_FILENAME = (
+    "model_comparison.csv"
+)
+
+COMPARISON_REPORT_PATH = os.path.join(
+    METRICS_DIR,
+    COMPARISON_REPORT_FILENAME,
 )
 
 
