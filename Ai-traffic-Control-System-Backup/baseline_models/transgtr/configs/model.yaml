@@ -1,0 +1,131 @@
+# ==========================================================
+# TransGTR Model Configuration
+# Paper:
+# Transferable Graph Structure Learning for
+# Graph-based Traffic Forecasting Across Cities (KDD 2023)
+# ==========================================================
+
+model:
+
+  # --------------------------------------------------------
+  # General
+  # --------------------------------------------------------
+  name: "TransGTR"
+
+  task: "Traffic Forecasting"
+
+  framework: "PyTorch"
+
+  device: "auto"
+
+# ==========================================================
+# TSFormer
+# ==========================================================
+
+tsformer:
+
+  enabled: true
+
+  input_length: 12
+
+  prediction_length: 12
+
+  embedding_dim: null
+
+  hidden_dim: null
+
+  num_layers: null
+
+  num_heads: null
+
+  dropout: null
+
+  positional_encoding: true
+
+# ==========================================================
+# Knowledge Distillation
+# ==========================================================
+
+knowledge_distillation:
+
+  enabled: true
+
+  teacher_model: "TSFormer"
+
+  student_model: "GraphWaveNet"
+
+  temperature: null
+
+  alpha: null
+
+  beta: null
+
+# ==========================================================
+# Graph Structure Generator (GTS)
+# ==========================================================
+
+structure_generator:
+
+  enabled: true
+
+  graph_learning: true
+
+  adaptive_graph: true
+
+  self_loop: true
+
+  normalize_adjacency: true
+
+# ==========================================================
+# Graph WaveNet
+# ==========================================================
+
+graph_wavenet:
+
+  enabled: true
+
+  residual_channels: null
+
+  dilation_channels: null
+
+  skip_channels: null
+
+  end_channels: null
+
+  kernel_size: null
+
+  blocks: null
+
+  layers: null
+
+  dropout: null
+
+# ==========================================================
+# Prediction Head
+# ==========================================================
+
+prediction:
+
+  output_dimension: 1
+
+  activation: "linear"
+
+# ==========================================================
+# Initialization
+# ==========================================================
+
+initialization:
+
+  method: "xavier_uniform"
+
+# ==========================================================
+# Model Save
+# ==========================================================
+
+checkpoint:
+
+  save_best_only: true
+
+  monitor: "validation_loss"
+
+  mode: "min"

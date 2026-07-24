@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-21T18:17:25.138736+05:30 by Eclipse SUMO netconvert 1.27.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}\data\typemap\osmNetconvert.typ.xml,${SUMO_HOME}\data\typemap\osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+        <ptline-clean-up value="true"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</netconvertConfiguration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="10103570" name="984A: Avantika -&gt;" line="984A" type="bus" vClass="bus" completeness="0.21" missingBefore="3" missingAfter="5">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="10319678" name="479A: Wazirpur Depot -&gt; Badarpur Border" line="479A" type="bus" vClass="bus" completeness="0.07" missingBefore="32" missingAfter="7">
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="10477215" name="166: Nizamuddin Railway Station -&gt; ?" line="166" type="bus" vClass="bus" completeness="0.35" missingAfter="10">
+        <route edges="584241789#1 1203083884 1203083883#1 1203083883#3 176466591#1 176466591#2 176466591#3 176466591#4 176466591#5 584241784#0 584241793#0 584241793#4 1090402162 77339656#0 77339656#1 77339656#4 77339656#5 77339656#6 77339656#11 77339656#12 77339656#13 680551215 561759719#0 561759719#1 561759719#2 561759719#3 561759719#4 678397108 678397107#0 678397107#1 561759718#0 561759718#1 561759718#2 561759718#3 561759718#4 561759718#5 585446272#0 585446285#0 585446285#1 585446285#2 585446285#3 585446284#0 176492654#2 176492654#3 176492654#4 176492654#5 176492654#6 176492654#7 176492654#8 176492654#11 176492654#12 176492654#13 176492654#14 176492654#15 176492654#18 176492654#19 1187268491#0 1187268491#1 1187268491#2 1187268490 24577364#0 24577364#1 1077595194 1077595195#1 732001894 581989172#0 581989172#1 604050032 24577379#0 24577379#1 24577379#2 582461174#0 582461174#1 582461174#2 296963058#0 296963058#1 296963058#2 296963058#3 296963058#4 296963058#5 296963058#6 296963058#7 758488036 711421332"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="5273109722" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="5426390776" name="ISPAT Bhawan"/>
+        <busStop id="5426390921" name="Dayal Singh College"/>
+        <busStop id="355435748" name="Sujan Singh Park"/>
+        <busStop id="5732544103" name="Shahjahan Road UPSC"/>
+    </ptLine>
+    <ptLine id="10477216" name="166: ? -&gt; Nizamuddin Railway Station" line="166" type="bus" vClass="bus" completeness="0.37" missingBefore="15">
+        <route edges="680551206 680551212#0 680551212#1 680551212#2 296963059#0 296963059#1 296963059#2 1126646522#0 24577367#0 24577367#1 24577367#2 24577367#4 24577367#6 24577367#7 24577367#8 1126646523 783084113#1 783084113#2 732001895#0 732001905 1187268486 1187268489#0 1187268489#1 732001907#0 732001907#1 80958874#0 80958874#1 80958874#2 80958874#5 80958874#6 80958874#7 80958874#8 80958874#9 80958874#10 80958874#11 80958874#12 80958874#13 80958874#14 80958874#15 730290863 24563348#0 24563348#1 24563348#3 24563348#4 24563348#7 24563348#8 24563348#9 24563348#9-AddedOffRampEdge 24563348#10 24563348#11 678397112 678397111#0 678397111#1 678397111#2 680551213 680551205 24563333#0 24563333#1 24563333#2 24563333#3 24563333#4 39013511#0 39013511#1 39013511#2 39013511#3 39013511#6 39013511#7 39013511#8 39013511#9 39013511#10 39013511#13 39013511#14 39013511#15 39013511#16 77339658 77339655#0 77339655#1 77339655#3 77339655#4 77339655#8 77339655#9 584369497 80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="6854465827" name="Humayun Road"/>
+        <busStop id="5426389916" name="Sujan Singh Park"/>
+        <busStop id="7062645321" name="Bharti Nagar"/>
+        <busStop id="5426388555" name="Dayal Singh College"/>
+        <busStop id="7062680765" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="7062680768" name="ISPAT Bhawan"/>
+        <busStop id="7062680766" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="6372277578" name="Dargah Hazarat Nizamuddin"/>
+        <busStop id="6385492244" name="Hazarat Nizamuddin"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="10740651" name="306: Nehru Place -&gt; Kalyanpuri" line="306" type="bus" vClass="bus" completeness="0.00" missingBefore="6" missingAfter="11"/>
+    <ptLine id="10766214" name="347: Kashmere Gate -&gt; Noida Sector 34/51" line="347" type="bus" vClass="bus" completeness="0.06" missingBefore="19" missingAfter="10">
+        <route edges="76834871 211191578 852601469#0 852601469#1 852601469#2 852601468#0 852601468#1 852601468#2"/>
+        <busStop id="7242732172" name="Temporary Stop"/>
+        <busStop id="6497707582" name="Delhi Police Apartment"/>
+    </ptLine>
+    <ptLine id="11137768" name="Train Rajdhani Express 22222: Hazrat Nizamuddin → Mumbai CSMT" line="22222" type="train" vClass="rail" completeness="0.11" missingAfter="8">
+        <route edges="817584044 1305175462#1 826105514 807640224#0 807640224#1 1305175460 312031914 1311279042 1463425460"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11137908" name="Train Rajdhani Express 22221: Mumbai CSMT → Hazrat Nizamuddin" line="22221" type="train" vClass="rail" completeness="0.11" missingBefore="8">
+        <route edges="1463425459 1311279043 77015775 -807900811 807900810 1466829167 -807900809#2 -807900809#1 -807900809#0"/>
+        <busStop id="7554999588" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11217579" name="Dakshin Superfast Express: Delhi =&gt; Hyderabad" line="Dakshin Superfast Express: Delhi =&gt; Hyderabad" type="train" vClass="rail" completeness="0.25" missingAfter="3">
+        <route edges="817584044 1305175462#1 826105514 807640224#0 807640224#1 1305175460 312031914 1311279042 1463425460"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11232098" name="623: Vasant Vihar CPWD -&gt; Shahdara Terminal" line="623" type="bus" vClass="bus" completeness="0.20" missingBefore="20" missingAfter="25">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 44316343#0 44316343#1 44316343#1-AddedOffRampEdge 44316343#2 169413610 265903506#0 265903506#2 265903506#3 265903506#4 265903506#5 265903506#6 265903506#7 265903506#8 265903506#9 265903506#10 265903506#11 265903506#12 265903506#13 265903506#14 265903506#15 265903506#16 265903506#17 265903506#18 265903506#19 265903506#20 265903506#21 265903506#22 614072011 614072017#0 614072017#1-AddedOnRampEdge 614072017#1 614072017#2 176492657 1516045286 561929986#0 561929986#1 561929986#3 561929986#4 611866622#0 611866615#2 583910213#0 583910213#1 583910213#2 583910213#3 1108471058 673792809#0 673792809#1 673792808#1 585446283#0 176492654#2 176492654#3 176492654#4 176492654#5 176492654#6 176492654#7 176492654#8 176492654#11 176492654#12 176492654#13 176492654#14 176492654#15 176492654#18 176492654#19 1187268491#0 1187268491#1 1187268491#2 1187268490 24577364#0 24577364#1 1077595194 1077595195#1 732001894 581989172#0 581989172#1 604050032 24577379#0 24577379#1 24577379#2 582461174#0 582461174#1 582461174#2 296963058#0 296963058#1 296963058#2 296963058#3 296963058#4 296963058#5 296963058#6 296963058#7"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6766175603" name="PT College (Kotla)"/>
+        <busStop id="6766995948" name="Defence Colony (Homeopathic College)"/>
+        <busStop id="5701997798" name="Sukhdev Vihar"/>
+        <busStop id="6449436641" name="Seva Nagar Flyover"/>
+        <busStop id="2578295201" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="7655631092" name="Pragati Vihar"/>
+        <busStop id="5426390921" name="Dayal Singh College"/>
+        <busStop id="7655631102" name="Bharti Nagar"/>
+        <busStop id="355435748" name="Sujan Singh Park"/>
+        <busStop id="5732544103" name="Shahjahan Road UPSC"/>
+    </ptLine>
+    <ptLine id="11302095" name="Train Rajdhani Express 22692: Hazrat Nizamuddin → Bengaluru" line="22692" type="train" vClass="rail" completeness="0.07" missingAfter="14">
+        <route edges="817584044 1305175462#1 826105514 807640224#0 807640224#1 1305175460 312031914 1311279042 1463425460"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11302587" name="Train Rajdhani Express 22691: Bengaluru → Hazrat Nizamuddin" line="22691" type="train" vClass="rail" completeness="0.07" missingBefore="14">
+        <route edges="1463425459 1311279043 77015775 -807900811 807900810 1466829167 -807900809#2 -807900809#1 -807900809#0"/>
+        <busStop id="7554999588" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11319035" name="Rajdhani Express 12431: Thiruvananthapuram Central → Hazrat Nizamuddin" line="12431" type="train" vClass="rail" completeness="0.05" missingBefore="20">
+        <route edges="1463425459 1311279043 807900812#0 807900812#1 1305175461 -807640224#1 -807640224#0 -826105514 -1305175462#1 -1305175462#0"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="11319036" name="Rajdhani Express 12432: Hazrat Nizamuddin → Thiruvananthapuram Central" line="12432" type="train" vClass="rail" completeness="0.05" missingAfter="20">
+        <route edges="-1187064676#0 -77015847#0 826105514 807640224#0 807640224#1 1305175460 312031914 1311279042 1463425460"/>
+        <busStop id="7554999586" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="13391955" line="966EX" type="bus" vClass="bus" completeness="0.25" missingBefore="2">
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="16054032" name="Train Duronto Express 12285: Secunderabad → Hazrat Nizamuddin" line="12285" type="train" vClass="rail" completeness="0.17" missingBefore="5">
+        <route edges="1463425459 1311279043 807900812#0 807900812#1 1305175461 -807640224#1 -807640224#0 -826105514 -1305175462#1 -1305175462#0"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="17337287" name="Delhi–Meerut RRTS (Sarai Kale Khan → Modipuram)" line="Delhi–Meerut RapidX" type="subway" vClass="subway" color="240,99,30" completeness="0.07" missingAfter="13">
+        <route edges="1465368138"/>
+        <busStop id="13604911524" name="Sarai Kale Khan"/>
+    </ptLine>
+    <ptLine id="17337288" name="Delhi–Meerut RRTS (Modipuram → Sarai Kale Khan)" line="Delhi–Meerut RapidX" type="subway" vClass="subway" color="240,99,30" completeness="0.07" missingBefore="13">
+        <route edges="1028281842"/>
+        <busStop id="13604911525" name="Sarai Kale Khan"/>
+    </ptLine>
+    <ptLine id="17900679" name="Train Duronto Express 12286: Hazrat Nizamuddin → Secunderabad" line="12286" type="train" vClass="rail" completeness="0.25" missingAfter="3">
+        <route edges="77015841#2 807900809#1 807900809#2 -1466829167 -807900810 312031914 1311279042 1463425460"/>
+        <busStop id="7554999588" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="17976620" name="Train Rajdhani Express 12954: Hazrat Nizamuddin → Mumbai Central" line="12954" type="train" vClass="rail" completeness="0.08" missingAfter="11">
+        <route edges="-1311279046#0 -619497120#0 -77015791#1 -77015791#0 -77015808 -77015776 -807900812#0 -1311279043 1311279044 1463425460"/>
+        <busStop id="7554880184" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="17976621" name="Train Rajdhani Express 12953: Mumbai Central → Hazrat Nizamuddin" line="12953" type="train" vClass="rail" completeness="0.08" missingBefore="11">
+        <route edges="1463425459 1311279043 807900812#0 807900812#1 1305175461 -807640224#1 -807640224#0 -826105514 77015847#0 77015847#1"/>
+        <busStop id="7554999586" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="17978265" name="Train Rajdhani Express 22413: Madgaon → Hazrat Nizamuddin" line="22413" type="train" vClass="rail" completeness="0.09" missingBefore="10">
+        <route edges="1463425459 1311279043 807900812#0 807900812#1 77015808 312031918#0 312031918#1 188228348#0 188228348#1"/>
+        <busStop id="7554999585" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="17978266" name="Train Rajdhani Express 22414: Hazrat Nizamuddin → Madgaon" line="22414" type="train" vClass="rail" completeness="0.09" missingAfter="10">
+        <route edges="817584044 1305175462#1 826105514 807640224#0 807640224#1 1305175460 312031914 1311279042 1463425460"/>
+        <busStop id="7554999587" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="20082612" name="12908 Maharashtra Sampark Kranti Superfast Express" line="12908" type="train" vClass="rail" completeness="0.14" missingAfter="6">
+        <route edges="-1311279046#0 -619497120#0 -77015791#1 -77015791#0 -77015808 -77015776 -807900812#0 -1311279043 1311279044 1463425460"/>
+        <busStop id="7554880184" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="20187638" name="12907 Maharashtra Sampark Kranti Superfast Express" line="12907" type="train" vClass="rail" completeness="0.17" missingBefore="5">
+        <route edges="1463425459 1311279043 807900812#0 807900812#1 1305175461 -807640224#1 -807640224#0 -826105514 77015847#0 77015847#1"/>
+        <busStop id="7554999586" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="20268499" name="Delhi–Meerut RRTS (Sarai Kale Khan → Duhai Depot)" line="Delhi–Meerut RapidX" type="subway" vClass="subway" color="240,99,30" completeness="0.12" missingAfter="7">
+        <route edges="1465368138"/>
+        <busStop id="13604911524" name="Sarai Kale Khan"/>
+    </ptLine>
+    <ptLine id="20268500" name="Delhi–Meerut RRTS (Duhai Depot → Sarai Kale Khan)" line="Delhi–Meerut RapidX" type="subway" vClass="subway" color="240,99,30" completeness="0.12" missingBefore="7">
+        <route edges="1028281842"/>
+        <busStop id="13604911525" name="Sarai Kale Khan"/>
+    </ptLine>
+    <ptLine id="20363050" name="Bypass Express: Uttam Nagar Terminal → Sarai Kale Khan ISBT" line="BPExp" type="bus" vClass="bus" completeness="0.20" missingBefore="11">
+        <route edges="679552303 1313465446 70258960#0 70258960#1"/>
+        <busStop id="6362607175" name="Nizamuddin Road Bridge"/>
+        <busStop id="6362085192" name="Indraprastha Park"/>
+        <busStop id="13669726310" name="Sarai Kale Khan"/>
+    </ptLine>
+    <ptLine id="20363051" name="Bypass Express: Sarai Kale Khan ISBT → Uttam Nagar Terminal" line="BPExp" type="bus" vClass="bus" completeness="0.44" missingAfter="5">
+        <route edges="1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 679512998 679512997 1313465445 70258948#0 70258948#1 70258948#2"/>
+        <busStop id="838835305" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6362085190" name="Indraprastha Park"/>
+        <busStop id="6362085189" name="Nizamuddin Road Bridge"/>
+    </ptLine>
+    <ptLine id="20996845" name="Train 19020: Haridwar Bandra Terminus Express" line="19020" type="train" vClass="rail" completeness="1.00">
+        <route edges="619497120#0 619497120#1 1311279046#1 1311279046#2"/>
+        <busStop id="7554880184" name="Hazrat Nizamuddin Junction"/>
+    </ptLine>
+    <ptLine id="2535797" name="Violet Line (Kashmere Gate → Raja Nahar Singh)" line="6" type="subway" vClass="subway" color="85,53,146" completeness="0.44" missingAfter="19">
+        <route edges="188245893#0 188245893#1 188245893#2"/>
+        <busStop id="6547772100" name="Kashmere Gate"/>
+        <busStop id="2722924227" name="Lal Quila"/>
+        <busStop id="1988668281" name="Jama Masjid"/>
+        <busStop id="2837165876" name="Delhi Gate"/>
+        <busStop id="3580369626" name="ITO"/>
+        <busStop id="2622338438" name="Mandi House"/>
+        <busStop id="1988668271" name="Janpath"/>
+        <busStop id="1665772897" name="Central Secretariat"/>
+        <busStop id="927873481" name="Khan Market"/>
+        <busStop id="562620239" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="562620241" name="Jangpura"/>
+        <busStop id="562620806" name="Lajpat Nagar (Violet Line)"/>
+        <busStop id="562620810" name="Moolchand"/>
+        <busStop id="927873489" name="Kailash Colony"/>
+        <busStop id="1135153141" name="Nehru Place"/>
+    </ptLine>
+    <ptLine id="2536069" name="Delhi Ring Railway" line="Delhi Ring Railway" type="train" vClass="rail" completeness="0.13" missingBefore="8" missingAfter="5">
+        <route edges="-1319706313 -312031917#4 -312031917#3 -312031917#2 -312031917#1 -312031917#0 -77015789 -582873041#2 -582873041#1 -582873041#0 -672159746 582873042#0 582873042#1 582873042#2 582873042#3 582873042#4 582873042#5 582873042#6 582873042#7 582873042#8 582873042#9 77340561#0 77340561#1"/>
+        <busStop id="-6195740840" name="Hazrat Nizamuddin Junction"/>
+        <busStop id="-6287897762" name="Lodhi Colony"/>
+    </ptLine>
+    <ptLine id="447209" name="Blue Line (Noida Electronic City → Dwarka Sector 21)" line="3" type="subway" vClass="subway" color="65,105,225" completeness="0.14" missingBefore="9" missingAfter="34">
+        <busStop id="5777613870" name="Noida Sector 18"/>
+        <busStop id="5777613877" name="Noida Sector 16"/>
+        <busStop id="5777613883" name="Noida Sector 15"/>
+        <busStop id="5777613898" name="New Ashok Nagar"/>
+        <busStop id="5777613909" name="Mayur Vihar Extension"/>
+        <busStop id="5777613919" name="Mayur Vihar - I (Blue Line)"/>
+        <busStop id="5777613940" name="Akshardham"/>
+    </ptLine>
+    <ptLine id="447210" name="Yellow Line (Samaypur Badli → Millennium City Centre)" line="2" type="subway" vClass="subway" color="255,223,0" completeness="0.30" missingBefore="16" missingAfter="10">
+        <route edges="-343626950#1 -343626950#0"/>
+        <busStop id="-554257818" name="Patel Chowk"/>
+        <busStop id="-6547772108" name="Central Secretariat"/>
+        <busStop id="-554257800" name="Seva Teerth"/>
+        <busStop id="-554257797" name="Lok Kalyan Marg"/>
+        <busStop id="-554257805" name="Jor Bagh"/>
+        <busStop id="-554257793" name="Dilli Haat - INA"/>
+        <busStop id="7018301884" name="A.I.I.M.S."/>
+        <busStop id="554257789" name="Green Park"/>
+        <busStop id="6547772107" name="Hauz Khas (Yellow Line)"/>
+        <busStop id="554257785" name="Malviya Nagar"/>
+        <busStop id="922910160" name="Saket"/>
+    </ptLine>
+    <ptLine id="6634345" name="534: Mehrauli -&gt; Anand Vihar ISBT" line="534" type="bus" vClass="bus" completeness="0.13" missingBefore="22" missingAfter="18">
+        <route edges="37703539#0 37703539#2 37703539#4 37703539#5 37703539#6 37703539#8 37703539#9 37703539#10 37703539#12 37703539#13 25457965#0 25457965#1 555197227 555197196#0 555197196#1 555197196#2 555197196#3 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="5121928122" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="7171446389" name="PWD Office"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+    </ptLine>
+    <ptLine id="6634350" name="534A: IGI Airport -&gt; Anand Vihar ISBT" line="534A" type="bus" vClass="bus" completeness="0.08" missingBefore="40" missingAfter="17">
+        <route edges="37703539#0 37703539#2 37703539#4 37703539#5 37703539#6 37703539#8 37703539#9 37703539#10 37703539#12 37703539#13 25457965#0 25457965#1 555197227 555197196#0 555197196#1 555197196#2 555197196#3 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="5121928122" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="7171446389" name="PWD Office"/>
+    </ptLine>
+    <ptLine id="7919780" name="578: Najafgarh → Safdarjung Terminal" line="578" type="bus" vClass="bus" completeness="0.14" missingBefore="19">
+        <route edges="28746245 1457651694 44315457#0 44315457#1 812690414 812690415#1 812690415#2 676708026#0 676708026#1 689446382 689446381 683766463 28616702#0 28616702#1 571249177#0 571249177#1 571168753#0 571168753#1 571168753#2 571168752 571168756 676708024"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5541755269" name="Kidwai Nagar"/>
+        <busStop id="6336918971" name="Safdarjung Terminal"/>
+    </ptLine>
+    <ptLine id="7920500" name="519: Mandi Gaon → Safdarjung Terminal" line="519" type="bus" vClass="bus" completeness="0.17" missingBefore="14">
+        <route edges="29534879 654175709#0 654175709#1 654175709#2 654175709#3 582367349#3 582367349#4 582367349#4-AddedOffRampEdge 80515440 583143702-AddedOnRampEdge 583143702 676708026#0 676708026#1 689446382 689446381 683766463 28616702#0 28616702#1 571249177#0 571249177#1 571168753#0 571168753#1 571168753#2 571168752 571168756 676708024"/>
+        <busStop id="5732543211" name="A.I.I.M.S."/>
+        <busStop id="5541755269" name="Kidwai Nagar"/>
+        <busStop id="6336918971" name="Safdarjung Terminal"/>
+    </ptLine>
+    <ptLine id="7920505" name="427: Nizamuddin Railway Station -&gt; Mehrauli Terminal" line="427" type="bus" vClass="bus" completeness="0.11" missingAfter="32">
+        <route edges="584241789#1 1203083884 1203083883#1 1203083883#3 176466591#1 176466591#2 176466591#3 176466591#4 176466591#5 584241787 1451897494-AddedOnRampEdge 1451897494 1451897494-AddedOffRampEdge 77015779#1 715377036-AddedOnRampEdge 715377036 77349488#1 77349488#2 77349488#3 77349488#4 77349488#5 584241782 37751254#0 37751254#1 37751254#2 760525680 566680381-AddedOnRampEdge 566680381 1313030094 39013521 1313030095 586156360#1 586156360#2 586156360#3 566009660#0 566009660#1 566009660#3"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+        <busStop id="5584872921" name="Ashram"/>
+        <busStop id="5426389543" name="Nehru Nagar"/>
+        <busStop id="5430723253" name="Sri Niwas Puri"/>
+    </ptLine>
+    <ptLine id="7921454" name="410: Jal Vihar Terminal -&gt; Khyala JJ Colony" line="410" type="bus" vClass="bus" completeness="0.15" missingAfter="38">
+        <route edges="-653235647#0 -38116089#12 -38116089#11 -38116089#10 -38116089#9 -38116089#8 -38116089#7 -38116089#6 -38116089#5 -38116089#4 -38116089#3 -38116089#2 -38116089#1 652047004 583620105#1 583620105#2 583620105#3 583620105#4 583620105#5 168381546#0 168381546#1 44317041#0 44317041#1 44317041#2 44317041#3 44317041#4 44317041#5 566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 37751255#0 37751255#1 39013516#0 39013516#1 202645529#0 202645529#1 202645529#2 1312806548 584241793#0 584241793#4 1090402162 77339656#0 77339656#1 77339656#4 77339656#5 77339656#6 77339656#11 77339656#12 77339656#13 680551215 680551214 680551213 1313158398 570859682#0 570859682#1 570859682#2 570859682#3 570859682#3-AddedOffRampEdge 570859682#4 570859682#6 77349485#1 77349485#2 77349485#3 77349485#4 680551212#0 680551212#1 680551212#2 582461172 758488036 711421332"/>
+        <busStop id="-6122143946" name="Jal Vihar Terminal"/>
+        <busStop id="6203988021" name="Lajpat Nagar (DJB)"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5584870725" name="Ashram"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="6077096067" name="Golf Club"/>
+        <busStop id="6385537594" name="Bapa Nagar"/>
+    </ptLine>
+    <ptLine id="7931502" name="611: Dhaula Kuan -&gt; Mayur Vihar Phase 3" line="611" type="bus" vClass="bus" completeness="0.03" missingBefore="17" missingAfter="39">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="7931519" name="727: Dwarka Mor Metro Station =&gt; Jawaharlal Nehru Stadium" line="727" type="bus" vClass="bus" completeness="0.04" missingBefore="38" missingAfter="7">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 44316332#0 44316332#1 44316332#2 24563338#0-AddedOnRampEdge 24563338#0 24563338#1 24563338#2 1312784811 1312784808 202800231 1312784814 1312784812#0 1312784812#1 1312784812#2 169421698#0 169421698#1 169421698#2 169421698#4 169421698#5 169421698#6 169421698#7 24563340#0 24563340#1 77349520 555242576 77349539#0 77349539#1 77349539#2 561759718#0 561759718#1 561759718#2 561759718#3 561759718#4 561759718#5 585446272#0 585446285#0 585446285#1 585446285#2 585446285#3"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="7944210" name="544: RK Puram Sector 1 -&gt; Badarpur Border" line="544" type="bus" vClass="bus" completeness="0.04" missingBefore="13" missingAfter="38">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 44316343#0 44316343#1 44316343#1-AddedOffRampEdge 44316343#2 732001899#0 565347502 265903505 590522606#0 265940883#0 265940883#1 265940883#2"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="7948129" name="469: Ambedkar Nagar Terminal -&gt; Anand Vihar ISBT" line="469" type="bus" vClass="bus" completeness="0.16" missingBefore="17" missingAfter="12">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5121928122" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+    </ptLine>
+    <ptLine id="7948131" name="450: Jal Vihar Terminal -&gt; Anand Parvat" line="450" type="bus" vClass="bus" completeness="0.11" missingAfter="17">
+        <route edges="-653235647#0 -38116089#12 -38116089#11 -38116089#10 -38116089#9 -38116089#8 -38116089#7 -38116089#6 -38116089#5 -38116089#4 -38116089#3 -38116089#2 -38116089#1 652047004 583620105#1 583620105#2 583620105#3 583620105#4 583620105#5 168381546#0 168381546#1 44317041#0 44317041#1 44317041#2 44317041#3 44317041#4 44317041#5 28412404#0 28412404#1 44316344 44316344-AddedOffRampEdge 590522605#0 590522605#1 565938869 561929987 563791824 265903506#0 265903506#2 265903506#3 265903506#4 265903506#5 265903506#6 265903506#7 265903506#8 265903506#9 265903506#10 265903506#11 265903506#12 265903506#13 265903506#14 265903506#15 265903506#16 265903506#17 265903506#18 265903506#19 265903506#20 265903506#21 265903506#22 614072011 614072017#0 614072017#1-AddedOnRampEdge 614072017#1 614072017#2 176492657 1516045286 561929986#0 561929986#1 561929986#3 561929986#4 611866622#0 611866615#2 583910213#0 583910213#1 583910213#2 583910213#3 1108471058 673792809#0 673792809#1 673792808#1 585446283#0 176492654#2 176492654#3 176492654#4 176492654#5 176492654#6 176492654#7 176492654#8 176492654#11 176492654#12 176492654#13 176492654#14 176492654#15 176492654#18 176492654#19"/>
+        <busStop id="-6122143946" name="Jal Vihar Terminal"/>
+        <busStop id="6203988021" name="Lajpat Nagar (DJB)"/>
+    </ptLine>
+    <ptLine id="7948135" name="413: Nizamuddin Railway Station -&gt; Mehrauli Terminal" line="413" type="bus" vClass="bus" completeness="0.14" missingAfter="18">
+        <route edges="584241789#1 1203083884 1203083883#1 1203083883#3 176466591#1 176466591#2 176466591#3 176466591#4 176466591#5 584241787 1451897494-AddedOnRampEdge 1451897494 1451897494-AddedOffRampEdge 77015779#1 715377036-AddedOnRampEdge 715377036 77349488#1 77349488#2 77349488#3 77349488#4 77349488#5 584241782 37751254#0 37751254#1 37751254#2 760525680 566680381-AddedOnRampEdge 566680381 1313030094 39013521 1313030095 566680382 1313027075 28412404#0 28412404#1 44316344 44316344-AddedOffRampEdge 265940884 265940883#0 265940883#1 265940883#2"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+        <busStop id="5584872921" name="Ashram"/>
+        <busStop id="5585958328" name="Nehru Nagar"/>
+    </ptLine>
+    <ptLine id="7948145" name="543: -&gt; Anand Vihar ISBT" line="543" type="bus" vClass="bus" completeness="0.27" missingBefore="8" missingAfter="8">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426391723" name="South Extension"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5121928122" name="Maharani Bagh"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+    </ptLine>
+    <ptLine id="7948146" name="479: Punjabi Bagh -&gt; Badarpur Border" line="479" type="bus" vClass="bus" completeness="0.09" missingBefore="8" missingAfter="12">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 37751255#0 37751255#1 584241795#0 584241795#1 657413479 584241782 690251655#0 690251655#1-AddedOnRampEdge 690251655#1 690251655#2 690251655#3 690251655#4 690251655#5-AddedOnRampEdge 690251655#5 690251655#6 690251655#7 690251655#8"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="7948149" name="450: Anand Parvat -&gt; Jal Vihar Terminal" line="450" type="bus" vClass="bus" completeness="0.36" missingBefore="4" missingAfter="10">
+        <route edges="80958874#0 80958874#1 80958874#2 80958874#5 80958874#6 80958874#7 80958874#8 80958874#9 80958874#10 80958874#11 80958874#12 80958874#13 80958874#14 80958874#15 730290860#0 730290860#4 730290860#5 673792811#0 673792811#1 673792810#0 673792810#1 673792810#2 673792810#3 673792810#4 611866613#0 611866617#1 561929985#0 561929985#1 1306337530 1306337529#0 1306337529#1 176492656 1516045288 176492655#1 614072012#0 614072012#1 563791819#0 563791819#1 563791819#2 563791819#3 563791819#4 563791819#5 563791819#6 563791819#7 563791819#8 563791819#9 563791819#10 563791819#11 168383153 556741449#0 169411882#1 169411882#2 169411882#3 169411882#4 169411882#5 169411882#6 169411882#7 169411882#8 579507806 583620104#0 583620104#1 583620104#3 583620104#4 583620104#5 583620104#6 583620104#7 38116089#1 38116089#2 38116089#3 38116089#4 38116089#5 38116089#6 38116089#7 38116089#8 38116089#9 38116089#10 38116089#11 38116089#12 38116089#13"/>
+        <busStop id="7019144405" name="Sujan Singh Park"/>
+        <busStop id="5426388555" name="Dayal Singh College"/>
+        <busStop id="5432771968" name="Pragati Vihar"/>
+        <busStop id="2578295203" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="6786032368" name="Sukhdev Vihar"/>
+        <busStop id="5431738836" name="Defence Colony (Homeopathic College)"/>
+        <busStop id="1694776065" name="PT College (Kotla)"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="7948153" name="413: Mehrauli Terminal -&gt; Nizamuddin Railway Station" line="413" type="bus" vClass="bus" completeness="0.14" missingBefore="18">
+        <route edges="169413591#0 561929987 565347502 563679829#0 563679829#1-AddedOnRampEdge 563679829#1 563679829#2 44316346 566680385 1313027076 44317039 39013518 312031900 37751255#0 37751255#1 39013516#0 39013516#1 202645529#0 202645529#1 202645529#2 1312806548 696618571#1 80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5584870725" name="Ashram"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="7948158" name="323: Dhaula Kuan → Noida Sector 62" line="323" type="bus" vClass="bus" completeness="0.12" missingBefore="14" missingAfter="4">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="7948162" name="(-) Teevra Mudrika Service: Punjabi Bagh Terminal" line="(-) TMS" type="bus" vClass="bus" completeness="0.03" missingBefore="29" missingAfter="55">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 679512998 679512997 1313465445 70258948#0 70258948#1 70258948#2"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="7950909" name="543A: Kapashera Border -&gt; Anand Vihar ISBT" line="543A" type="bus" vClass="bus" completeness="0.05" missingBefore="19" missingAfter="22">
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="7964856" name="427: Mehrauli Terminal -&gt; Nizamuddin Railway Station" line="427" type="bus" vClass="bus" completeness="0.09" missingBefore="31">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 37751255#0 37751255#1 39013516#0 39013516#1 202645529#0 202645529#1 202645529#2 1312806548 696618571#1 80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5584870725" name="Ashram"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="8035118" name="418A: Badarpur Border -&gt; Shahadra Terminal" line="418A" type="bus" vClass="bus" completeness="0.08" missingBefore="16" missingAfter="16">
+        <route edges="562479736#0 562479736#1 562479736#3 562479736#4 562479736#5-AddedOnRampEdge 562479736#5 562479736#7 585446277#1"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="5342182750" name=""/>
+        <busStop id="5342182505" name=""/>
+    </ptLine>
+    <ptLine id="8035119" name="405: Badarpur Border → Old Delhi Railway Station" line="405" type="bus" vClass="bus" completeness="0.10" missingBefore="16" missingAfter="15">
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="5273109722" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="5342182750" name=""/>
+        <busStop id="5342182505" name=""/>
+    </ptLine>
+    <ptLine id="8037669" name="Blue Line (Dwarka Sector 21 → Noida Electronic City)" line="3" type="subway" vClass="subway" color="65,105,225" completeness="0.14" missingBefore="34" missingAfter="9">
+        <route edges="210933925"/>
+        <busStop id="906780885" name="Akshardham"/>
+        <busStop id="906772268" name="Mayur Vihar - I (Blue Line)"/>
+        <busStop id="906780869" name="Mayur Vihar Extension"/>
+        <busStop id="1869899247" name="New Ashok Nagar"/>
+        <busStop id="906772185" name="Noida Sector 15"/>
+        <busStop id="915595467" name="Noida Sector 16"/>
+        <busStop id="915595437" name="Noida Sector 18"/>
+    </ptLine>
+    <ptLine id="8037705" name="Violet Line (Raja Nahar Singh → Kashmere Gate)" line="6" type="subway" vClass="subway" color="85,53,146" completeness="0.38" missingBefore="19" missingAfter="2">
+        <route edges="610024714#0 610024714#1 610024711#1 610024711#2"/>
+        <busStop id="5777629833" name="Nehru Place"/>
+        <busStop id="5777629235" name="Kailash Colony"/>
+        <busStop id="9546632101" name="Moolchand"/>
+        <busStop id="5777629559" name="Lajpat Nagar (Violet Line)"/>
+        <busStop id="5777629829" name="Jangpura"/>
+        <busStop id="5777629158" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="5777629164" name="Khan Market"/>
+        <busStop id="5777629169" name="Central Secretariat"/>
+        <busStop id="5777629177" name="Janpath"/>
+        <busStop id="5777629183" name="Mandi House"/>
+        <busStop id="5777629192" name="ITO"/>
+        <busStop id="5777629197" name="Delhi Gate"/>
+        <busStop id="5777629203" name="Jama Masjid"/>
+    </ptLine>
+    <ptLine id="8037712" name="Yellow Line (Millennium City Centre → Samaypur Badli)" line="2" type="subway" vClass="subway" color="255,223,0" completeness="0.30" missingBefore="10" missingAfter="16">
+        <route edges="610022378#0 610022378#1 610022433#1 610022433#2"/>
+        <busStop id="6179179026" name="Saket"/>
+        <busStop id="5777601903" name="Malviya Nagar"/>
+        <busStop id="5777601896" name="Hauz Khas (Yellow Line)"/>
+        <busStop id="5777601886" name="Green Park"/>
+        <busStop id="5777602034" name="A.I.I.M.S."/>
+        <busStop id="5777602018" name="Dilli Haat - INA"/>
+        <busStop id="5777602013" name="Jor Bagh"/>
+        <busStop id="5777602010" name="Lok Kalyan Marg"/>
+        <busStop id="5777602008" name="Seva Teerth"/>
+        <busStop id="5777602007" name="Central Secretariat"/>
+        <busStop id="5777602002" name="Patel Chowk"/>
+    </ptLine>
+    <ptLine id="8050584" name="410: Khyala JJ Colony -&gt; Jal Vihar Terminal" line="410" type="bus" vClass="bus" completeness="0.20" missingBefore="36" missingAfter="1">
+        <route edges="44831985#0 44831985#1 44831985#2 44831985#3 1187268470#0 1187268470#1 1187268470#3 1199333276 1313161443 1199333278 77349527 77349521 697289105-AddedOnRampEdge 697289105 24563333#0 24563333#1 24563333#2 24563333#3 24563333#4 39013511#0 39013511#1 39013511#2 39013511#3 39013511#6 39013511#7 39013511#8 39013511#9 39013511#10 39013511#13 39013511#14 39013511#15 39013511#16 77339658 77339655#0 77339655#1 77339655#3 77339655#4 77339655#8 77339655#9 730237457#0 730237457#3 1451897494-AddedOnRampEdge 1451897494 1451897494-AddedOffRampEdge 77015779#1 715377036-AddedOnRampEdge 715377036 77349488#1 77349488#2 77349488#3 77349488#4 77349488#5 584241782 37751254#0 37751254#1 37751254#2 760525680 566680381-AddedOnRampEdge 566680381 1313030094 39013521 1313030095 586156360#1 586156360#2 586156360#3 566009660#0 566009660#1 566009660#3 168383153 556741449#0 169411882#1 169411882#2 169411882#3 169411882#4 169411882#5 169411882#6 169411882#7 169411882#8 579507806 583620104#0 583620104#1 583620104#3 583620104#4 583620104#5 583620104#6 583620104#7 38116089#1 38116089#2 38116089#3 38116089#4 38116089#5 38116089#6 38116089#7 38116089#8 38116089#9 38116089#10 38116089#11 38116089#12 38116089#13"/>
+        <busStop id="6385537600" name="Bapa Nagar"/>
+        <busStop id="6372277579" name="Golf Club"/>
+        <busStop id="6372277578" name="Dargah Hazarat Nizamuddin"/>
+        <busStop id="6385492244" name="Hazarat Nizamuddin"/>
+        <busStop id="5584872921" name="Ashram"/>
+        <busStop id="5426389543" name="Nehru Nagar"/>
+        <busStop id="5430723253" name="Sri Niwas Puri"/>
+        <busStop id="6372277576" name="Lajpat Nagar (DJB)"/>
+        <busStop id="6122143946" name="Jal Vihar Terminal"/>
+    </ptLine>
+    <ptLine id="8063463" name="442: Azadpur Metro Station =&gt; Nehru Place" line="442" type="bus" vClass="bus" completeness="0.07" missingBefore="10" missingAfter="12">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="8079874" name="724: Uttam Nagar Terminal =&gt; Nehru Place Terminal" line="724" type="bus" vClass="bus" completeness="0.07" missingBefore="13" missingAfter="12">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+    </ptLine>
+    <ptLine id="8082254" name="(-) Outer Mudrika Service: Uttam Nagar Terminal" line="(-) OMS" type="bus" vClass="bus" completeness="0.05" missingBefore="87" missingAfter="34">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="6395693844" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+    </ptLine>
+    <ptLine id="8195973" name="460: Badarpur Border -&gt; Minto Road Terminal" line="460" type="bus" vClass="bus" completeness="0.07" missingBefore="16" missingAfter="27">
+        <route edges="662141606#0 662141606#4 662141606#4-AddedOffRampEdge 662141606#5 662141606#6 39013515#0 39013515#1 760525680 566680381-AddedOnRampEdge 566680381 1313030094 39013521 1313030095 566680382 1313027075 28412404#0 28412404#1 561759715 564173144 707002818 28412393#0 28412393#1 28412393#2 28412393#3 28412393#4 28412393#5 28412393#6 690251619 564173145 44315450 581439210 581439221 583143702-AddedOnRampEdge 583143702 676708026#0 676708026#1 689446382 689446381 683766464 683766462 683766462-AddedOffRampEdge 1539359559 1312986298 370543236 1312986296 774999418#0 774999418#1 31756484#0 31756484#1 31756484#2 31756484#3 31756484#5 31756484#6 31756484#7 31756484#8 31756484#9 31756484#10 31756484#11 31756484#12 37222913#0 37222913#0-AddedOffRampEdge 37222913#1 37222913#2 370543239#0 370543239#1 370543239#2 370543239#3 370543239#4 370543239#5 370543239#6 370543239#7 370543239#8 749606301 37222915#0 37222915#1 37222897#0 37222897#1 37222897#2 37222897#3 37222897#4 37222897#5 37222897#6 28121266#0 28121266#1 28121266#2 1005501931"/>
+        <busStop id="6198752458" name="New Friends Colony"/>
+        <busStop id="910451189" name="Ashram"/>
+        <busStop id="5585958328" name="Nehru Nagar"/>
+    </ptLine>
+    <ptLine id="8197605" name="181A: Jahangirpuri E-Block -&gt; Nizamuddin Railway Station" line="181A" type="bus" vClass="bus" completeness="0.23" missingBefore="31">
+        <route edges="680551206 680551212#0 680551212#1 680551212#2 296963059#0 296963059#1 296963059#2 1126646522#0 24577367#0 24577367#1 24577367#2 24577367#4 24577367#6 24577367#7 24577367#8 1126646523 783084113#1 783084113#2 732001895#0 732001905 1187268486 1187268489#0 1187268489#1 732001907#0 732001907#1 80958874#0 80958874#1 80958874#2 80958874#5 80958874#6 80958874#7 80958874#8 80958874#9 80958874#10 80958874#11 80958874#12 80958874#13 80958874#14 80958874#15 730290863 24563348#0 24563348#1 24563348#3 24563348#4 24563348#7 24563348#8 24563348#9 24563348#9-AddedOffRampEdge 24563348#10 24563348#11 678397112 678397111#0 678397111#1 678397111#2 680551213 680551205 24563333#0 24563333#1 24563333#2 24563333#3 24563333#4 39013511#0 39013511#1 39013511#2 39013511#3 39013511#6 39013511#7 39013511#8 39013511#9 39013511#10 39013511#13 39013511#14 39013511#15 39013511#16 77339658 77339655#0 77339655#1 77339655#3 77339655#4 77339655#8 77339655#9 584369497 80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="6854465827" name="Humayun Road"/>
+        <busStop id="5426389916" name="Sujan Singh Park"/>
+        <busStop id="7062645321" name="Bharti Nagar"/>
+        <busStop id="5426388555" name="Dayal Singh College"/>
+        <busStop id="7062680765" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="7062680768" name="ISPAT Bhawan"/>
+        <busStop id="7062680766" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="6372277578" name="Dargah Hazarat Nizamuddin"/>
+        <busStop id="6385492244" name="Hazarat Nizamuddin"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="8202259" name="181A: Nizamuddin Railway Station -&gt; Jahangirpuri E-Block" line="181A" type="bus" vClass="bus" completeness="0.19" missingAfter="36">
+        <route edges="758488036 711421332 24577367#0 24577367#1 24577367#2 24577367#4 24577367#6 24577367#7 24577367#8"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="5273109722" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="5426390776" name="ISPAT Bhawan"/>
+        <busStop id="5426390921" name="Dayal Singh College"/>
+        <busStop id="7655631102" name="Bharti Nagar"/>
+        <busStop id="355435748" name="Sujan Singh Park"/>
+        <busStop id="10221267679" name="Humayun Road"/>
+        <busStop id="5732544103" name="Shahjahan Road UPSC"/>
+    </ptLine>
+    <ptLine id="8206274" name="543B: IGI Airport -&gt; Anand Vihar ISBT" line="543B" type="bus" vClass="bus" completeness="0.07" missingBefore="21" missingAfter="19">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5426388566" name="South Extension"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="8229055" name="Gurgaon → Anand Vihar ISBT" line="Gurgaon → Anand Vihar ISBT" type="bus" vClass="bus" completeness="0.02" missingBefore="31" missingAfter="14">
+        <route edges="28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346 566680385 1313027076 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 1313444177 682964508"/>
+        <busStop id="6112155497" name="Andrews Ganj"/>
+    </ptLine>
+    <ptLine id="8235171" name="624A: Munirka -&gt; Anand Vihar ISBT" line="624A" type="bus" vClass="bus" completeness="0.04" missingBefore="11" missingAfter="29">
+        <busStop id="4819437823" name="Safdarjung Hospital"/>
+        <busStop id="5541755269" name="Kidwai Nagar"/>
+    </ptLine>
+    <ptLine id="8241298" name="Pink Line (Shiv Vihar → Maujpur - Babarpur)" line="7" type="subway" vClass="subway" color="252,142,172" completeness="0.21" missingBefore="15" missingAfter="22">
+        <route edges="-364896924 -615615095#1 -615615095#0 -279102625"/>
+        <busStop id="-6196100473" name="Shree Ram Mandir Mayur Vihar"/>
+        <busStop id="-6196100472" name="Mayur Vihar - I (Pink Line)"/>
+        <busStop id="6196100471" name="Sarai Kale Khan - Nizamuddin"/>
+        <busStop id="4676940460" name="Ashram"/>
+        <busStop id="6196100470" name="Vinobapuri"/>
+        <busStop id="2833526623" name="Lajpat Nagar (Pink Line)"/>
+        <busStop id="2833526616" name="South Extension"/>
+        <busStop id="2833526634" name="Dilli Haat - INA"/>
+        <busStop id="2833526638" name="Sarojini Nagar"/>
+        <busStop id="2833526619" name="Bhikaji Cama Place"/>
+    </ptLine>
+    <ptLine id="8242437" name="Pink Line (Maujpur - Babarpur → Shiv Vihar)" line="7" type="subway" vClass="subway" color="252,142,172" completeness="0.19" missingBefore="22" missingAfter="16">
+        <route edges="610024736 615615096#1 610024737"/>
+        <busStop id="5777630345" name="Bhikaji Cama Place"/>
+        <busStop id="5777630338" name="Sarojini Nagar"/>
+        <busStop id="5777630330" name="Dilli Haat - INA"/>
+        <busStop id="5777630323" name="South Extension"/>
+        <busStop id="6196100465" name="Lajpat Nagar (Pink Line)"/>
+        <busStop id="6196100469" name="Vinobapuri"/>
+        <busStop id="6196100468" name="Ashram"/>
+        <busStop id="5777630298" name="Sarai Kale Khan - Nizamuddin"/>
+        <busStop id="6196100467" name="Mayur Vihar - I (Pink Line)"/>
+    </ptLine>
+    <ptLine id="8253430" name="492: Nehru Place -&gt; Noida Sector 62" line="492" type="bus" vClass="bus" completeness="0.20" missingBefore="11" missingAfter="23">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 37751255#0 37751255#1 584241795#0 584241795#1 657413479 581239050#0 581239050#1 581239050#2 555197196#0 555197196#1 555197196#2 555197196#3 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744 76834871 211191578 852601469#0 852601469#1 852601469#2 852601468#0 852601468#1 852601468#2"/>
+        <busStop id="6497625779" name="PGDAV College"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="6395693844" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="7171446389" name="PWD Office"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+        <busStop id="7242732172" name="Temporary Stop"/>
+        <busStop id="6497707582" name="Delhi Police Apartment"/>
+    </ptLine>
+    <ptLine id="8255865" name="966: Nizamuddin Railway Station =&gt; Nangloi" line="966" type="bus" vClass="bus" completeness="1.00">
+        <route edges="584241789#1 1203083884 1203083883#1 1203083883#3 176466591#1 176466591#2 176466591#3 176466591#4 176466591#5"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="8255866" name="794: Nizamuddin Railway Station -&gt; Manglapuri" line="794" type="bus" vClass="bus" completeness="0.32" missingAfter="11">
+        <route edges="562340228#0 562340228#1 562340228#2 1253187154#0 1253187154#1 -562340230#3 -562340230#1 -562340230#0 -766036533#1 -766036533#0 766036523#0 766036523#1 766036523#2 766036523#3 766036523#4 45323444 1541038918#1 1541038918#3 1541038918#4 1541038918#5 1541038918#6 1541038918#7 1541038918#8 1541038918#9 1541038918#10 1541038918#12 1541038918#13 766036531#0 766036531#1 758753871 571167485#0 774999421 1539359564 1312986297-AddedOnRampEdge 1312986297 1312986297-AddedOffRampEdge 683766456 683766453#0 683766453#1 31756485#0 31756485#1 31756485#2 31756485#3 31756485#4 722082934#0 722082934#1 722082934#2-AddedOnRampEdge 722082934#2 722082934#2-AddedOffRampEdge 581439206 581439207 581439225 377280468 44315451#0 44315451#1 584241789#1 1203083884 1203083883#1 1203083883#3 176466591#1 176466591#2 176466591#3 176466591#4 176466591#5"/>
+        <busStop id="938635417" name="Nizamuddin Railway Station"/>
+        <busStop id="5441523402" name="Central School Lodhi Road"/>
+        <busStop id="-7154453335" name="Lodhi Colony Market"/>
+        <busStop id="5715392714" name="Lodhi Colony"/>
+        <busStop id="5483332132" name="Safdarjung Airport"/>
+        <busStop id="5483331962" name="Kidwai Nagar"/>
+    </ptLine>
+    <ptLine id="8255867" name="966: Nangloi =&gt; Nizamuddin Railway Station" line="966" type="bus" vClass="bus" completeness="1.00">
+        <route edges="80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="8255868" name="794: Manglapuri -&gt; Nizamuddin Railway Station" line="794" type="bus" vClass="bus" completeness="0.89">
+        <route edges="676708026#0 676708026#1 689446382 689446381 683766464 683766462 683766462-AddedOffRampEdge 1539359559 1312986298 370543236 1312986296 774999418#0 774999418#1 31756484#0 31756484#1 31756484#2 31756484#3 31756484#5 31756484#6 31756484#7 31756484#8 31756484#9 31756484#10 31756484#11 31756484#12 760525678#1 760525678#2 760525678#3 565938874#0 565938874#1 565938874#2 565938874#3 766036526#2 766036526#3 766036526#4 766036526#5 766036526#6 766036526#7 766036526#8 -766036523#4 -766036523#3 -766036523#2 -766036523#1 -766036523#0 766036524 766036529#0 766036529#1 562340230#0 562340230#1 562340230#3 176492665#0 176492665#1 80439704#0 80439704#1 80439704#2 80439704#3 80439704#4 176466571 1076237280#2 176466583"/>
+        <busStop id="5541755269" name="Kidwai Nagar"/>
+        <busStop id="5541755268" name=""/>
+        <busStop id="5732542138" name="Safdarjung Airport"/>
+        <busStop id="5732543997" name="Safdarjung Madrasa"/>
+        <busStop id="-5715393721" name="Lodhi Colony"/>
+        <busStop id="5441523433" name="Lodhi Colony Block 12-13"/>
+        <busStop id="5441522259" name="Central School Lodhi Road"/>
+        <busStop id="938635590" name="Nizamuddin Railway Station"/>
+    </ptLine>
+    <ptLine id="9297931" name="(-) Teevra Mudrika Service: Lajpat Nagar" line="(-) TMS" type="bus" vClass="bus" completeness="0.08" missingBefore="3" missingAfter="77">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 679512998 679512997 1313465445 70258948#0 70258948#1 70258948#2 28746245 1457651694 676708027 676708027-AddedOffRampEdge 1451903122 570427347 43359324 565938868#0-AddedOnRampEdge 565938868#0 565938868#1 565938871#0 565938871#1 565938871#2 565938871#3 565938871#4 565938871#5 565938870 44316345 563679828 44316346"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5121928122" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6362085192@9297931" name="Indraprastha Park"/>
+        <busStop id="6362085189" name="Nizamuddin Road Bridge"/>
+    </ptLine>
+    <ptLine id="9306321" name="405: Badarpur Border → Mori Gate Terminal" line="405" type="bus" vClass="bus" completeness="0.15" missingBefore="16" missingAfter="16">
+        <busStop id="6198752458" name="New Friends Colony"/>
+        <busStop id="910451189" name="Ashram"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="5273109722" name="DPS School (near Neela Gumbad)"/>
+        <busStop id="5342182750" name=""/>
+        <busStop id="5342182505" name=""/>
+    </ptLine>
+    <ptLine id="9444906" name="410A: Subhash Nagar Crossing -&gt; Jal Vihar Terminal" line="410A" type="bus" vClass="bus" completeness="0.20" missingBefore="34" missingAfter="1">
+        <route edges="44831985#0 44831985#1 44831985#2 44831985#3 1187268470#0 1187268470#1 1187268470#3 1199333276 1313161443 1199333278 77349527 77349521 697289105-AddedOnRampEdge 697289105 24563333#0 24563333#1 24563333#2 24563333#3 24563333#4 39013511#0 39013511#1 39013511#2 39013511#3 39013511#6 39013511#7 39013511#8 39013511#9 39013511#10 39013511#13 39013511#14 39013511#15 39013511#16 77339658 77339655#0 77339655#1 77339655#3 77339655#4 77339655#8 77339655#9 730237457#0 730237457#3 1451897494-AddedOnRampEdge 1451897494 1451897494-AddedOffRampEdge 77015779#1 715377036-AddedOnRampEdge 715377036 77349488#1 77349488#2 77349488#3 77349488#4 77349488#5 584241782 37751254#0 37751254#1 37751254#2 760525680 566680381-AddedOnRampEdge 566680381 1313030094 39013521 1313030095 586156360#1 586156360#2 586156360#3 566009660#0 566009660#1 566009660#3 168383153 556741449#0 169411882#1 169411882#2 169411882#3 169411882#4 169411882#5 169411882#6 169411882#7 169411882#8 579507806 583620104#0 583620104#1 583620104#3 583620104#4 583620104#5 583620104#6 583620104#7 38116089#1 38116089#2 38116089#3 38116089#4 38116089#5 38116089#6 38116089#7 38116089#8 38116089#9 38116089#10 38116089#11 38116089#12 38116089#13"/>
+        <busStop id="6385537600" name="Bapa Nagar"/>
+        <busStop id="6372277579" name="Golf Club"/>
+        <busStop id="6372277578" name="Dargah Hazarat Nizamuddin"/>
+        <busStop id="6385492244" name="Hazarat Nizamuddin"/>
+        <busStop id="5584872921" name="Ashram"/>
+        <busStop id="5426389543" name="Nehru Nagar"/>
+        <busStop id="5430723253" name="Sri Niwas Puri"/>
+        <busStop id="6372277576" name="Lajpat Nagar (DJB)"/>
+        <busStop id="6122143946" name="Jal Vihar Terminal"/>
+    </ptLine>
+    <ptLine id="9444907" name="410A: Jal Vihar Terminal → Subhash Nagar Crossing" line="410A" type="bus" vClass="bus" completeness="0.16" missingAfter="34">
+        <route edges="-653235647#0 -38116089#12 -38116089#11 -38116089#10 -38116089#9 -38116089#8 -38116089#7 -38116089#6 -38116089#5 -38116089#4 -38116089#3 -38116089#2 -38116089#1 652047004 583620105#1 583620105#2 583620105#3 583620105#4 583620105#5 168381546#0 168381546#1 44317041#0 44317041#1 44317041#2 44317041#3 44317041#4 44317041#5 566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 37751255#0 37751255#1 39013516#0 39013516#1 202645529#0 202645529#1 202645529#2 1312806548 584241793#0 584241793#4 1090402162 77339656#0 77339656#1 77339656#4 77339656#5 77339656#6 77339656#11 77339656#12 77339656#13 680551215 680551214 680551213 1313158398 570859682#0 570859682#1 570859682#2 570859682#3 570859682#3-AddedOffRampEdge 570859682#4 570859682#6 77349485#1 77349485#2 77349485#3 77349485#4 680551212#0 680551212#1 680551212#2 582461172 758488036 711421332"/>
+        <busStop id="-6122143946" name="Jal Vihar Terminal"/>
+        <busStop id="6203988021" name="Lajpat Nagar (DJB)"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="5584870725" name="Ashram"/>
+        <busStop id="6371764317" name="Hazarat Nizamuddin"/>
+        <busStop id="6077096067" name="Golf Club"/>
+        <busStop id="6385537594" name="Bapa Nagar"/>
+    </ptLine>
+    <ptLine id="9455279" name="311A: Ambedkar Nagar Terminal -&gt; Anand Vihar ISBT" line="311A" type="bus" vClass="bus" completeness="0.13" missingBefore="22" missingAfter="20">
+        <route edges="566680388#0 566680388#1 566680388#2 566680388#3 566680388#4 586156365#1 586156365#2 586156365#3 44317039 39013518 312031900 312031901 1252913582 555197196#4 39013523#1 39013523#2 39013523#3 39013523#4 39013523#5 39013523#6 39013523#7 70258965#0 70258965#1 70258965#2 70258965#3 170767287#0 170767287#1 170767287#2 170767287#3 77349489#1 77349489#2 77349489#3 77349489#4 77349489#5 77349489#6 1491586823 70258954#1 70258954#3 70258954#4 70258954#5 555197204 679512999-AddedOnRampEdge 679512999 679512999-AddedOffRampEdge 812684509 631795142 76834907#1 76834908 682971785 76834886#1 682971783 682971782 555197220#0 555197220#1 813012744"/>
+        <busStop id="6497625779" name="PGDAV College"/>
+        <busStop id="5426388558" name="Nehru Nagar"/>
+        <busStop id="6395693844" name="Maharani Bagh"/>
+        <busStop id="5121928125" name="Gurudwara Bala Sahib"/>
+        <busStop id="5121928128" name="Sarai Kale Khan"/>
+        <busStop id="5121928130" name="Sarai Kale Khan ISBT"/>
+        <busStop id="6396989742" name="Khel Gaon"/>
+    </ptLine>
+    <ptLine id="9600222" name="623: Shahdara Terminal -&gt; Vasant Vihar CPWD" line="623" type="bus" vClass="bus" completeness="0.19" missingBefore="29" missingAfter="20">
+        <route edges="680551206 680551212#0 680551212#1 680551212#2 296963059#0 296963059#1 296963059#2 1126646522#0 24577367#0 24577367#1 24577367#2 24577367#4 24577367#6 24577367#7 24577367#8 1126646523 783084113#1 783084113#2 732001895#0 732001905 1187268486 1187268489#0 1187268489#1 732001907#0 732001907#1 80958874#0 80958874#1 80958874#2 80958874#5 80958874#6 80958874#7 80958874#8 80958874#9 80958874#10 80958874#11 80958874#12 80958874#13 80958874#14 80958874#15 730290860#0 730290860#4 730290860#5 673792811#0 673792811#1 673792810#0 673792810#1 673792810#2 673792810#3 673792810#4 611866613#0 611866617#1 561929985#0 561929985#1 1306337530 1306337529#0 1306337529#1 176492656 1516045288 176492655#1 614072012#0 614072012#1 563791819#0 563791819#1 563791819#2 563791819#3 563791819#4 563791819#5 563791819#6 563791819#7 563791819#8 563791819#9 563791819#10 563791819#11 563791822#0 563791822#1 265903505 565938869 562340226#1 562340226#2 562340226#3 562340226#4 562340226#5 28412393#0 28412393#1 28412393#2 28412393#3 28412393#4 28412393#5 28412393#6 690251619 564173145 44315450 1313474874 44315451#0 44315451#1"/>
+        <busStop id="6854465827" name="Humayun Road"/>
+        <busStop id="5426389916" name="Sujan Singh Park"/>
+        <busStop id="7062645321" name="Bharti Nagar"/>
+        <busStop id="5426388555" name="Dayal Singh College"/>
+        <busStop id="5432771968" name="Pragati Vihar"/>
+        <busStop id="7655302453" name=""/>
+        <busStop id="5248673897" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="7167030420" name="Seva Nagar Flyover"/>
+        <busStop id="6786032368" name="Sukhdev Vihar"/>
+        <busStop id="5431738836" name="Defence Colony (Homeopathic College)"/>
+        <busStop id="1694776065" name="PT College (Kotla)"/>
+        <busStop id="5426391318" name="South Extension"/>
+        <busStop id="4819415322" name="All India Institute of Medical Sciences"/>
+    </ptLine>
+    <ptLine id="9600341" name="443: Shahdara -&gt; Badarpur Border" line="443" type="bus" vClass="bus" completeness="0.06" missingBefore="24" missingAfter="5">
+        <route edges="76834871 211191578 852601469#0 852601469#1 852601469#2 852601468#0 852601468#1 852601468#2"/>
+        <busStop id="7242732172" name="Temporary Stop"/>
+        <busStop id="6497707582" name="Delhi Police Apartment"/>
+    </ptLine>
+</ptLines>

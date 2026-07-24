@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-14 15:54:13.294812 by Eclipse SUMO randomTrips.py v1_27_1+0000-7717f2379d9
+<configuration>
+    <net-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\osm.net.xml.gz"/>
+    <output-trip-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\generated_demand\medium.trips.xml"/>
+    <prefix value="medium_"/>
+    <edge-permission value="passenger"/>
+    <seed value="202"/>
+    <min-distance value="300.0"/>
+    <remove-loops value="True"/>
+    <begin value="900.0"/>
+    <end value="1800.0"/>
+    <insertion-rate value="600.0"/>
+    <random-depart value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="medium_0" depart="901.00" from="24583592#5" to="-24584391#1"/>
+    <trip id="medium_1" depart="915.00" from="-1072960943#1" to="-138947059#1"/>
+    <trip id="medium_2" depart="916.00" from="24584424#3" to="995793692#2"/>
+    <trip id="medium_3" depart="923.00" from="-24584511#2" to="370672194#1"/>
+    <trip id="medium_4" depart="931.00" from="596373338#4" to="-370672194#5"/>
+    <trip id="medium_5" depart="938.00" from="24583489#2" to="563974730#1"/>
+    <trip id="medium_6" depart="946.00" from="24577383#0" to="596373338#0"/>
+    <trip id="medium_7" depart="951.00" from="-562499724#8" to="24584512#2"/>
+    <trip id="medium_8" depart="953.00" from="24577097#2" to="24584380#8"/>
+    <trip id="medium_9" depart="956.00" from="-1438583474#7" to="24563448#0"/>
+    <trip id="medium_10" depart="961.00" from="24584392#1" to="-577982260#6"/>
+    <trip id="medium_11" depart="962.00" from="24583584#1" to="-1072963716#1"/>
+    <trip id="medium_12" depart="964.00" from="1438583474#6" to="80926778#5"/>
+    <trip id="medium_13" depart="968.00" from="24584421#1" to="24583321#2"/>
+    <trip id="medium_14" depart="981.00" from="24583327#11" to="116046167#1"/>
+    <trip id="medium_15" depart="1000.00" from="712992074#11" to="24583593#0"/>
+    <trip id="medium_16" depart="1000.00" from="24577118#0" to="1126838107"/>
+    <trip id="medium_17" depart="1003.00" from="-24584383#1" to="-24584511#3"/>
+    <trip id="medium_18" depart="1010.00" from="24584380#5" to="24583489#1"/>
+    <trip id="medium_19" depart="1013.00" from="577982260#6" to="24563431#0"/>
+    <trip id="medium_20" depart="1017.00" from="1182424430#1" to="24583587#1"/>
+    <trip id="medium_21" depart="1020.00" from="-686644352#2" to="995793692#5"/>
+    <trip id="medium_22" depart="1027.00" from="24584417#0" to="-998790358#17"/>
+    <trip id="medium_23" depart="1028.00" from="24577118#6" to="708488754#4"/>
+    <trip id="medium_24" depart="1039.00" from="712992074#4" to="614071995"/>
+    <trip id="medium_25" depart="1040.00" from="1122231679" to="1438583474#2"/>
+    <trip id="medium_26" depart="1053.00" from="24577096#3" to="-1271156415"/>
+    <trip id="medium_27" depart="1083.00" from="24584377#8" to="24583584#2"/>
+    <trip id="medium_28" depart="1090.00" from="596373332#1" to="1073010465"/>
+    <trip id="medium_29" depart="1103.00" from="998790354#2" to="563679821#2"/>
+    <trip id="medium_30" depart="1119.00" from="24584375#0" to="-562499724#6"/>
+    <trip id="medium_31" depart="1138.00" from="80926764#3" to="370672194#3"/>
+    <trip id="medium_32" depart="1139.00" from="-24584511#7" to="-278577245#0"/>
+    <trip id="medium_33" depart="1149.00" from="760817631#5" to="164786644#2"/>
+    <trip id="medium_34" depart="1153.00" from="447141137#1" to="44188368#1"/>
+    <trip id="medium_35" depart="1160.00" from="665150699#2" to="-998790354#5"/>
+    <trip id="medium_36" depart="1164.00" from="-278577245#2" to="996679779#1"/>
+    <trip id="medium_37" depart="1167.00" from="-24583593#5" to="998790362#1"/>
+    <trip id="medium_38" depart="1176.00" from="1271156421#3" to="-1072978656#0"/>
+    <trip id="medium_39" depart="1181.00" from="-998790358#10" to="570616026#1"/>
+    <trip id="medium_40" depart="1184.00" from="1307222666#0" to="-24583594#2"/>
+    <trip id="medium_41" depart="1185.00" from="-1493678699#1" to="-1271156413#0"/>
+    <trip id="medium_42" depart="1190.00" from="24583594#3" to="1122230050"/>
+    <trip id="medium_43" depart="1195.00" from="31756488" to="-24583587#3"/>
+    <trip id="medium_44" depart="1210.00" from="-995792406#0" to="24583584#3"/>
+    <trip id="medium_45" depart="1213.00" from="1066077571#3" to="44257669#2"/>
+    <trip id="medium_46" depart="1215.00" from="24584511#7" to="1354558617"/>
+    <trip id="medium_47" depart="1217.00" from="447141143#1" to="1121186660#1"/>
+    <trip id="medium_48" depart="1230.00" from="760817632#2" to="563679836#11"/>
+    <trip id="medium_49" depart="1230.00" from="-995792406#2" to="711421326#0"/>
+    <trip id="medium_50" depart="1233.00" from="24584412" to="712992071#11"/>
+    <trip id="medium_51" depart="1233.00" from="447141155#0" to="760536611#2"/>
+    <trip id="medium_52" depart="1237.00" from="24583491#0" to="111695525#0"/>
+    <trip id="medium_53" depart="1248.00" from="562499724#8" to="778199266#6"/>
+    <trip id="medium_54" depart="1251.00" from="24583339#2" to="537797266#0"/>
+    <trip id="medium_55" depart="1254.00" from="24584380#9" to="1072960946#3"/>
+    <trip id="medium_56" depart="1263.00" from="-24584512#1" to="24584394#0"/>
+    <trip id="medium_57" depart="1268.00" from="-24584394#0" to="235103610#0"/>
+    <trip id="medium_58" depart="1270.00" from="1533060172#0" to="996679779#5"/>
+    <trip id="medium_59" depart="1300.00" from="24584377#6" to="24583489#7"/>
+    <trip id="medium_60" depart="1320.00" from="-24584507#1" to="563679836#8"/>
+    <trip id="medium_61" depart="1325.00" from="1122274850" to="537797266#0"/>
+    <trip id="medium_62" depart="1330.00" from="995792406#0" to="695576804#1"/>
+    <trip id="medium_63" depart="1331.00" from="-44277694#5" to="80678182#0"/>
+    <trip id="medium_64" depart="1334.00" from="24584512#0" to="-24584420#1"/>
+    <trip id="medium_65" depart="1337.00" from="-1122230044" to="-686673952#2"/>
+    <trip id="medium_66" depart="1341.00" from="24584375#8" to="24577113#2"/>
+    <trip id="medium_67" depart="1352.00" from="-1053851211#5" to="994825989"/>
+    <trip id="medium_68" depart="1356.00" from="-1327208478" to="708488754#0"/>
+    <trip id="medium_69" depart="1359.00" from="614072001" to="44277694#1"/>
+    <trip id="medium_70" depart="1378.00" from="116046168#0" to="24583334#5"/>
+    <trip id="medium_71" depart="1379.00" from="-278577245#5" to="-80921410#0"/>
+    <trip id="medium_72" depart="1384.00" from="-1072978656#2" to="1122230048"/>
+    <trip id="medium_73" depart="1385.00" from="-1271156421#5" to="1074764284#0"/>
+    <trip id="medium_74" depart="1388.00" from="1537111946#0" to="24583339#1"/>
+    <trip id="medium_75" depart="1394.00" from="24583327#2" to="708474904#1"/>
+    <trip id="medium_76" depart="1397.00" from="24584422#0" to="-1072960946#0"/>
+    <trip id="medium_77" depart="1401.00" from="-24584381#2" to="-24583495#5"/>
+    <trip id="medium_78" depart="1410.00" from="24584390#1" to="711421334#2"/>
+    <trip id="medium_79" depart="1412.00" from="712992077#1" to="708488754#0"/>
+    <trip id="medium_80" depart="1421.00" from="24583495#1" to="24584392#1"/>
+    <trip id="medium_81" depart="1422.00" from="24584511#7" to="-998790358#14"/>
+    <trip id="medium_82" depart="1433.00" from="24577114#1" to="-24583593#2"/>
+    <trip id="medium_83" depart="1437.00" from="1072954053#1" to="1122230049#0"/>
+    <trip id="medium_84" depart="1442.00" from="995792406#5" to="-371342951#1"/>
+    <trip id="medium_85" depart="1449.00" from="24577118#1" to="-1307222666#0"/>
+    <trip id="medium_86" depart="1452.00" from="-1271156421#4" to="24583332#5"/>
+    <trip id="medium_87" depart="1456.00" from="24584377#7" to="24583339#3"/>
+    <trip id="medium_88" depart="1461.00" from="998790358#10" to="24577097#6"/>
+    <trip id="medium_89" depart="1464.00" from="24584409#2" to="712992074#4"/>
+    <trip id="medium_90" depart="1467.00" from="-24583587#1" to="577982260#2"/>
+    <trip id="medium_91" depart="1469.00" from="-24583590#3" to="712992077#1"/>
+    <trip id="medium_92" depart="1470.00" from="563974730#5" to="581245363#3"/>
+    <trip id="medium_93" depart="1471.00" from="711421334#1" to="-1122231679"/>
+    <trip id="medium_94" depart="1478.00" from="-164786644#2" to="1438583474#2"/>
+    <trip id="medium_95" depart="1483.00" from="-1307222666#0" to="758753895"/>
+    <trip id="medium_96" depart="1484.00" from="-24584417#1" to="-577982260#3"/>
+    <trip id="medium_97" depart="1485.00" from="562499724#12" to="-24583489#1"/>
+    <trip id="medium_98" depart="1495.00" from="711421334#3" to="1122026496#1"/>
+    <trip id="medium_99" depart="1506.00" from="24583487#9" to="708474897#1"/>
+    <trip id="medium_100" depart="1508.00" from="-1438583474#7" to="-708474904#1"/>
+    <trip id="medium_101" depart="1510.00" from="-998790354#4" to="1438583474#9"/>
+    <trip id="medium_102" depart="1516.00" from="-370672194#10" to="24584377#5"/>
+    <trip id="medium_103" depart="1519.00" from="-1053851211#7" to="24583590#2"/>
+    <trip id="medium_104" depart="1520.00" from="80926781#2" to="-675478334#1"/>
+    <trip id="medium_105" depart="1528.00" from="-577982260#2" to="577982260#6"/>
+    <trip id="medium_106" depart="1543.00" from="-24583768#2" to="24583327#3"/>
+    <trip id="medium_107" depart="1547.00" from="1327208477#2" to="-24584416#1"/>
+    <trip id="medium_108" depart="1556.00" from="1072954052#2" to="611866595#0"/>
+    <trip id="medium_109" depart="1562.00" from="24584377#7" to="998790358#6"/>
+    <trip id="medium_110" depart="1564.00" from="-24584384#3" to="562499724#22"/>
+    <trip id="medium_111" depart="1571.00" from="-24583592#1" to="-782774056#1"/>
+    <trip id="medium_112" depart="1583.00" from="-24583495#4" to="24584375#11"/>
+    <trip id="medium_113" depart="1585.00" from="24584501" to="48964552#3"/>
+    <trip id="medium_114" depart="1590.00" from="24584378#0" to="24584380#4"/>
+    <trip id="medium_115" depart="1591.00" from="-24584424#2" to="-80926764#0"/>
+    <trip id="medium_116" depart="1592.00" from="-24577108#3" to="709281061#1"/>
+    <trip id="medium_117" depart="1600.00" from="1182424430#0" to="711421334#0"/>
+    <trip id="medium_118" depart="1601.00" from="-1122231678" to="31756488"/>
+    <trip id="medium_119" depart="1640.00" from="-1121186659" to="24584383#4"/>
+    <trip id="medium_120" depart="1646.00" from="1271156412#2" to="-24584381#2"/>
+    <trip id="medium_121" depart="1648.00" from="24577097#7" to="1053851211#5"/>
+    <trip id="medium_122" depart="1650.00" from="24577097#5" to="24584391#1"/>
+    <trip id="medium_123" depart="1662.00" from="80926773#0" to="-80926778#0"/>
+    <trip id="medium_124" depart="1664.00" from="1122230043#1" to="24577095#0"/>
+    <trip id="medium_125" depart="1670.00" from="1053851215" to="80950052"/>
+    <trip id="medium_126" depart="1676.00" from="711421334#6" to="-24584420#5"/>
+    <trip id="medium_127" depart="1676.00" from="712992071#10" to="1438583474#10"/>
+    <trip id="medium_128" depart="1686.00" from="-1072960946#0" to="44277694#1"/>
+    <trip id="medium_129" depart="1688.00" from="-24584420#9" to="537797267#1"/>
+    <trip id="medium_130" depart="1691.00" from="-24583489#7" to="24583593#6"/>
+    <trip id="medium_131" depart="1699.00" from="-24577108#3" to="24584377#7"/>
+    <trip id="medium_132" depart="1700.00" from="-562499724#8" to="-1282119227#1"/>
+    <trip id="medium_133" depart="1724.00" from="709276135#6" to="563791811#4"/>
+    <trip id="medium_134" depart="1727.00" from="24584421#1" to="1121186661"/>
+    <trip id="medium_135" depart="1727.00" from="1287398725#1" to="24583593#5"/>
+    <trip id="medium_136" depart="1728.00" from="-562499724#14" to="370672194#2"/>
+    <trip id="medium_137" depart="1734.00" from="-24583487#6" to="-24584392#5"/>
+    <trip id="medium_138" depart="1736.00" from="-998790358#15" to="24583327#0"/>
+    <trip id="medium_139" depart="1738.00" from="-24584418#1" to="-1537111945#2"/>
+    <trip id="medium_140" depart="1740.00" from="24584384#1" to="24584380#8"/>
+    <trip id="medium_141" depart="1748.00" from="-1438583474#4" to="1327208476#0"/>
+    <trip id="medium_142" depart="1749.00" from="997761547#0" to="-577982260#0"/>
+    <trip id="medium_143" depart="1754.00" from="-24583489#8" to="998790358#3"/>
+    <trip id="medium_144" depart="1764.00" from="563679820#1" to="1053851211#3"/>
+    <trip id="medium_145" depart="1775.00" from="24583327#7" to="581245357"/>
+    <trip id="medium_146" depart="1776.00" from="-24584384#5" to="998790353#0"/>
+    <trip id="medium_147" depart="1777.00" from="562499724#12" to="24584383#4"/>
+    <trip id="medium_148" depart="1783.00" from="-562499724#15" to="563974733#1"/>
+    <trip id="medium_149" depart="1791.00" from="-1122026496#1" to="1066077570#0"/>
+</routes>

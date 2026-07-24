@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-12T00:34:56.765582+05:30 by Eclipse SUMO netconvert 1.27.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}\data\typemap\osmNetconvert.typ.xml,${SUMO_HOME}\data\typemap\osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+        <ptline-clean-up value="true"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</netconvertConfiguration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="13388413" name="281: New Seemapuri -&gt; Kendriya Terminal" line="281" type="bus" vClass="bus" completeness="0.04" missingBefore="16">
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="13388414" name="281: Kendriya Terminal -&gt; New Seemapuri" line="281" type="bus" vClass="bus" completeness="0.27" missingAfter="15">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 994825989 997761552#0 997761552#1 -24583487#14 -24583487#13 -24583487#12 -24583487#11 -24583487#10 -24583487#9 -24583487#8 -24583487#6 -24583487#5 -24583487#3 -24583487#2 -24583487#1 -24583487#0 1066619121#0 1066619121#1 997761548#0 997761548#1 997761545-AddedOnRampEdge 997761545"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673" name="Gurudwara Bangla Sahib"/>
+        <busStop id="-9182102064" name="YMCA"/>
+    </ptLine>
+    <ptLine id="13394584" name="282" line="282" type="bus" vClass="bus" completeness="1.00">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="13394585" name="706A" line="706A" type="bus" vClass="bus" completeness="0.67" missingAfter="1">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 998790359 998790356#0 998790356#1 998790356#2 998790356#3 998790356#4 998790356#5 998790356#6 998790356#7 998790356#8 998790354#0 998790354#1 998790354#2 998790354#3 998790354#4 998790354#5 998790354#7"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5345535254" name="Firoz Shah Road"/>
+    </ptLine>
+    <ptLine id="14191706" name="890: Hastsal Village LIG Flats" line="890" type="bus" vClass="bus" completeness="0.50" missingAfter="6">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 994825989 997761552#0 997761552#1 994825990#0 994825990#1 994825990#2 994825990#3 447141148 572511731 447141147#0 447141147#1 1493678697 758753883 1066077571#0 1066077571#1 1066077571#2 1066077571#3 447141145 447141146 570413590 24577131 760536610#0 760536610#1 1307222667#1 722082946#0 722082946#1 760536612 680551209 758488038 758753872 758753873 24577391#0 24577391#1 24577391#2 1053851216 -1053851218 782774057#0 782774057#1 782774056#1 700261790#0 700261790#1"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673" name="Gurudwara Bangla Sahib"/>
+        <busStop id="6385537605" name="Patel Chowk"/>
+        <busStop id="5483954443" name="Krishi Bhawan"/>
+        <busStop id="5484083823" name="Udyog Bhawan"/>
+    </ptLine>
+    <ptLine id="2535797" name="Violet Line (Kashmere Gate → Raja Nahar Singh)" line="6" type="subway" vClass="subway" color="85,53,146" completeness="0.32" missingAfter="23">
+        <route edges="188245893"/>
+        <busStop id="6547772100" name="Kashmere Gate"/>
+        <busStop id="2722924227" name="Lal Quila"/>
+        <busStop id="1988668281" name="Jama Masjid"/>
+        <busStop id="2837165876" name="Delhi Gate"/>
+        <busStop id="3580369626" name="ITO"/>
+        <busStop id="2622338438" name="Mandi House"/>
+        <busStop id="1988668271" name="Janpath"/>
+        <busStop id="1665772897" name="Central Secretariat"/>
+        <busStop id="927873481" name="Khan Market"/>
+        <busStop id="562620239" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="562620241" name="Jangpura"/>
+    </ptLine>
+    <ptLine id="2535798" name="Airport Express Line (Dwarka Sector 25 → New Delhi Airport Express Terminal)" line="AEx" type="subway" vClass="subway" color="255,140,0" completeness="0.29" missingBefore="5">
+        <route edges="188216912#0 188216912#1"/>
+        <busStop id="9938725207" name="Shivaji Stadium"/>
+        <busStop id="6547772096" name="New Delhi Airport Express Terminal"/>
+    </ptLine>
+    <ptLine id="447209" name="Blue Line (Noida Electronic City → Dwarka Sector 21)" line="3" type="subway" vClass="subway" color="65,105,225" completeness="0.06" missingBefore="19" missingAfter="28">
+        <route edges="52082767"/>
+        <busStop id="554257827" name="Mandi House"/>
+        <busStop id="554257839" name="Barakhambha Road"/>
+        <busStop id="939091076" name="Rajiv Chowk"/>
+    </ptLine>
+    <ptLine id="447210" name="Yellow Line (Samaypur Badli → Millennium City Centre)" line="2" type="subway" vClass="subway" color="255,223,0" completeness="0.19" missingBefore="16" missingAfter="14">
+        <route edges="343626950#0 343626950#1"/>
+        <busStop id="554257818" name="Patel Chowk"/>
+        <busStop id="6547772108" name="Central Secretariat"/>
+        <busStop id="554257800" name="Seva Teerth"/>
+        <busStop id="554257797" name="Lok Kalyan Marg"/>
+        <busStop id="554257805" name="Jor Bagh"/>
+        <busStop id="554257793" name="Dilli Haat - INA"/>
+        <busStop id="7018301884" name="A.I.I.M.S."/>
+    </ptLine>
+    <ptLine id="7917858" name="890: Kendriya Terminal" line="890" type="bus" vClass="bus" completeness="0.00" missingBefore="2" missingAfter="11">
+        <route edges="760536610#1 1307222667#1 -1053851218 782774057#0 782774057#1 782774056#1"/>
+    </ptLine>
+    <ptLine id="7917864" name="890: Hastsal Village LIG Flats" line="890" type="bus" vClass="bus" completeness="0.19" missingAfter="13">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 994825989 997761552#0 997761552#1 994825990#0 994825990#1 994825990#2 994825990#3 447141148 572511731 447141147#0 447141147#1 1493678697 758753883 1066077571#0 1066077571#1 1066077571#2 1066077571#3 447141145 447141146 570413590 24577131 760536610#0 760536610#1 1307222667#1 722082946#0 722082946#1 760536612 680551209 758488038 758753872 758753873 24577391#0 24577391#1 24577391#2 1053851216 -1053851218 782774057#0 782774057#1 782774056#1 700261790#0 700261790#1"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="5483331673" name="Gurudwara Bangla Sahib"/>
+    </ptLine>
+    <ptLine id="7918841" name="680: Kendriya Terminal -&gt; Ambedkar Nagar Sector 4" line="680" type="bus" vClass="bus" completeness="0.10" missingAfter="35">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="6225764792" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7921444" name="680: Ambedkar Nagar Sector 4 -&gt; Kendriya Terminal" line="680" type="bus" vClass="bus" completeness="0.02" missingBefore="49" missingAfter="7">
+        <route edges="708474897#0 708474897#1 -782774056#1 -782774057#1 -782774057#0 1053851218 1053851217 570413595#0 570413595#1 570413594 447143201#0 447143201#1 24577102 717907819#0 717907819#1 717907819#2 717907819#3 717907819#4 717907819#5 23134746#0 23134746#1 23134746#1-AddedOffRampEdge 763520419#0 1064518284 447141138#0 447141138#1 611866597 24584390#1 24584389#0 24584389#1 24584389#2 24584389#3 714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483331671" name="South Avenue"/>
+    </ptLine>
+    <ptLine id="7921447" name="580: Ambedkar Nagar Sector 4 =&gt; Kendriya Terminal" line="580" type="bus" vClass="bus" completeness="0.50" missingAfter="1">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="7921449" name="540: Tara Apartment -&gt; Kendriya Terminal" line="540" type="bus" vClass="bus" completeness="0.04" missingBefore="24">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="7921451" name="480: Kendriya Terminal -&gt; DDA Flats Kalkaji" line="480" type="bus" vClass="bus" completeness="0.10" missingAfter="27">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7921455" name="408E: Raghubir Nagar" line="408E" type="bus" vClass="bus" completeness="1.00">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7921456" name="391: Kendriya Terminal -&gt; Kalyanpuri" line="391" type="bus" vClass="bus" completeness="0.28" missingAfter="21">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 994825989 997761552#0 997761552#1 994825990#0 994825990#1 994825990#2 994825990#3 447141148 572511731 447141147#0 447141147#1 1493678697 758753883 1066077571#0 1066077571#1 1066077571#2 1066077571#3 447141145 998790362#0 998790362#1 1327208477#0 1327208477#1 1327208477#2 1493678699#0 1493678699#1 24577106#0 24577106#1 24577106#2 24577106#3 24577106#4 24577106#5 998790361 447141132#0 447141132#1 447141132#2 447141132#3 447141132#4 596373329 562340239 998790359 998790356#0 998790356#1 998790356#2 998790356#3 998790356#4 998790356#5 998790356#6 998790356#7 998790356#8 998790355#1 998790354#0 998790354#1 998790354#2 998790354#3 998790354#4 998790354#5 998790354#7 1533060173#0 1533060173#1 998790352#1 998790358#0 998790358#1 998790358#2 998790358#3 998790358#4 998790358#5 998790358#6 998790358#7 998790358#9 998790358#10 998790358#11 998790358#12 998790358#14 998790358#15 998790358#16 998790358#17 998790358#18"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673" name="Gurudwara Bangla Sahib"/>
+        <busStop id="6385537605" name="Patel Chowk"/>
+        <busStop id="7267338505" name="Krishi Bhawan"/>
+        <busStop id="5345535254" name="Firoz Shah Road"/>
+        <busStop id="4440796915" name="Kasturba Gandhi Marg Crossing"/>
+    </ptLine>
+    <ptLine id="7921457" name="390: Kendriya Terminal -&gt; Trilokpuri 13 Block" line="390" type="bus" vClass="bus" completeness="0.09" missingAfter="29">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7921460" name="378: Kendriya Terminal -&gt; Mayur Vihar Phase 3" line="378" type="bus" vClass="bus" completeness="0.20" missingAfter="33">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 997761553 997761552#0 997761552#1 -24583487#14 -24583487#13 -24583487#12 -24583487#11 -24583487#10 -24583487#9 -24583487#8 -24583487#6 -24583487#5 -24583487#3 -24583487#2 -24583487#1 -24583487#0 1066619121#0 1066619121#1 997761547#0 74851428#1 74851428#2 74851428#3 74851428#4 74851428#5 74851428#5-AddedOffRampEdge 74851428#6 563791811#1 563791811#2 563791811#3 563791811#4 563791811#5 563791811#6 563791811#7 563679820#0 563679820#1 563679820#2 563679820#4 563679820#5 563679820#6"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673@7921460" name="Gurudwara Bangla Sahib"/>
+        <busStop id="-9182102064" name="YMCA"/>
+        <busStop id="9214974876" name="Jantar Mantar"/>
+        <busStop id="5432720712" name="Tolstoy Marg"/>
+    </ptLine>
+    <ptLine id="7921461" name="370 (2)" line="370" type="bus" vClass="bus" completeness="0.80">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7921462" name="349: Kendriya Terminal -&gt; Mayur Vihar Phase 2" line="349" type="bus" vClass="bus" completeness="0.36" missingAfter="13">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 994825989 997761552#0 997761552#1 -24583487#14 -24583487#13 -24583487#12 -24583487#11 -24583487#10 -24583487#9 -24583487#8 -24583487#6 -24583487#5 -24583487#3 -24583487#2 -24583487#1 -24583487#0 1066619121#0 1066619121#1 997761547#0 74851428#1 74851428#2 74851428#3 74851428#4 74851428#5 74851428#5-AddedOffRampEdge 74851428#6 563791811#1 563791811#2 563791811#3 563791811#4 563791811#5 563791811#6 563791811#7 563679820#0 563679820#1 563679820#2 563679820#4 563679820#5 563679820#6"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673" name="Gurudwara Bangla Sahib"/>
+        <busStop id="-9182102064" name="YMCA"/>
+        <busStop id="9214974876" name="Jantar Mantar"/>
+        <busStop id="5432720712" name="Tolstoy Marg"/>
+    </ptLine>
+    <ptLine id="7921469" name="270" line="270" type="bus" vClass="bus" completeness="0.71" missingAfter="1">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 998790359 998790356#0 998790356#1 998790356#2 998790356#3 998790356#4 998790356#5 998790356#6 998790356#7 998790356#8 998790354#0 998790354#1 998790354#2 998790354#3 998790354#4 998790354#5 998790354#7"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="4440796915" name="Kasturba Gandhi Marg Crossing"/>
+        <busStop id="5345535254" name="Firoz Shah Road"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+    </ptLine>
+    <ptLine id="7921521" name="100: Adarsh Nagar" line="100" type="bus" vClass="bus" completeness="0.67" missingAfter="2">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 24584380#0 24584380#1 24584380#2 24584380#3 24584380#4 24584380#5 24584380#6 24584380#7 24584380#8 24584380#9 24584379 1278775919 24583771#1 24583771#2 24583771#3 1278775918#0 1278775918#1 24583773 447141155#0 447141155#1 447141155#2 31756488 665150699#0 665150699#2 447141143#0 447141143#1-AddedOnRampEdge 447141143#1 1424529893 665150665#1 998197441 447141151#0 447141151#1 447141151#2 447141151#3 447141151#5 447141151#6 447141151#7"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="7116238187" name="Kendriya Terminal"/>
+        <busStop id="6225479821" name="Gurudwara Rakab Ganj"/>
+        <busStop id="6225479822" name="Talkatora Road"/>
+        <busStop id="6225479669" name="Doctor Ram Manohar Lohia Hospital"/>
+    </ptLine>
+    <ptLine id="7921525" name="100: Kendriya Terminal" line="100" type="bus" vClass="bus" completeness="0.20" missingBefore="30">
+        <route edges="24577478#0 24577478#0-AddedOffRampEdge 24577478#1 996679779#1 996679779#2 996679779#3 996679779#4 996679779#5 996679779#6 996679779#7 996679779#8 447141147#0 447141147#1 1493678697 24583324#0 24583324#1 590609994#0 590609994#1 717907807#0 717907807#1 717907807#2 717907807#3 717907807#4 717907807#6 48964552#0 48964552#1 48964552#2 48964552#3 48964552#5 48964552#6 48964552#7 48964552#8 998197440 24584378#0 24584378#1 24584378#2 24584378#3 24584378#4 24584378#6 24584378#8 24584378#9 24584378#10 24584378#11 447141140 722082949#0 722082949#1 447141153#0 447141153#1 24584389#0 24584389#1 24584389#2 24584389#3 714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 24583320#0 24583320#1 570526051 447141152#0 447141152#1"/>
+        <busStop id="6404197725" name="Police Station Parliament Street"/>
+        <busStop id="5637100894" name="Patel Chowk"/>
+        <busStop id="5637101391" name="Gurudwara Bangla Sahib"/>
+        <busStop id="5338584991" name="New Delhi Post Office"/>
+        <busStop id="5338584905" name="Doctor Ram Manohar Lohia Hospital"/>
+        <busStop id="6225480474" name="Talkatora Road"/>
+        <busStop id="6225482595" name="Gurudwara Rakab Ganj"/>
+        <busStop id="4156355793" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="7944209" name="580: Kendriya Terminal =&gt; Ambedkar Nagar Sector 4" line="580" type="bus" vClass="bus" completeness="0.60" missingAfter="2">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+    </ptLine>
+    <ptLine id="7948127" name="480: DDA Flats Kalkaji -&gt; Kendriya Terminal" line="480" type="bus" vClass="bus" completeness="0.05" missingBefore="21">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="7964852" name="540: Kendriya Terminal -&gt; Tara Apartment" line="540" type="bus" vClass="bus" completeness="0.17" missingAfter="28">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3 570413589#0 570413589#1 570413589#2 447141139 1425368050#0 1425368050#1 447141140 24584377#0 24584377#1 24584377#2 24584377#3 24584377#4 24584377#5 24584377#6 24584377#7 24584377#8 24584377#10 447141152#0 447141152#1 570526053 447141150#0 447141150#1 554665390 24583321#0 24583321#1 24583321#2 997761553 997761552#0 997761552#1 994825990#0 994825990#1 994825990#2 994825990#3 447141148 572511731 447141147#0 447141147#1 1493678697 758753883 1066077571#0 1066077571#1 1066077571#2 1066077571#3 447141145 447141146 570413590 24577131 760536610#0 760536610#1 1307222667#1 722082946#0 722082946#1 760536612 680551209 758488038 758753872 758753873 24577391#0 24577391#1 24577391#2 1053851216 -1053851218"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+        <busStop id="5346174186" name="New Delhi Post Office"/>
+        <busStop id="5483331673@7921460" name="Gurudwara Bangla Sahib"/>
+        <busStop id="5483954443" name="Krishi Bhawan"/>
+        <busStop id="5484083823" name="Udyog Bhawan"/>
+    </ptLine>
+    <ptLine id="8037669" name="Blue Line (Dwarka Sector 21 → Noida Electronic City)" line="3" type="subway" vClass="subway" color="65,105,225" completeness="0.06" missingBefore="28" missingAfter="19">
+        <route edges="604707732"/>
+        <busStop id="6539894853" name="Rajiv Chowk"/>
+        <busStop id="5737167209" name="Barakhambha Road"/>
+        <busStop id="5737167205" name="Mandi House"/>
+    </ptLine>
+    <ptLine id="8037705" name="Violet Line (Raja Nahar Singh → Kashmere Gate)" line="6" type="subway" vClass="subway" color="85,53,146" completeness="0.26" missingBefore="23" missingAfter="2">
+        <route edges="610024711"/>
+        <busStop id="5777629829" name="Jangpura"/>
+        <busStop id="5777629158" name="Jawaharlal Nehru Stadium"/>
+        <busStop id="5777629164" name="Khan Market"/>
+        <busStop id="5777629169" name="Central Secretariat"/>
+        <busStop id="5777629177" name="Janpath"/>
+        <busStop id="5777629183" name="Mandi House"/>
+        <busStop id="5777629192" name="ITO"/>
+        <busStop id="5777629197" name="Delhi Gate"/>
+        <busStop id="5777629203" name="Jama Masjid"/>
+    </ptLine>
+    <ptLine id="8037712" name="Yellow Line (Millennium City Centre → Samaypur Badli)" line="2" type="subway" vClass="subway" color="255,223,0" completeness="0.19" missingBefore="14" missingAfter="16">
+        <route edges="610022433#0 610022433#1 610022433#2 610022433#3 610022433#4"/>
+        <busStop id="5777602034" name="A.I.I.M.S."/>
+        <busStop id="5777602018" name="Dilli Haat - INA"/>
+        <busStop id="5777602013" name="Jor Bagh"/>
+        <busStop id="5777602010" name="Lok Kalyan Marg"/>
+        <busStop id="5777602008" name="Seva Teerth"/>
+        <busStop id="5777602007" name="Central Secretariat"/>
+        <busStop id="5777602002" name="Patel Chowk"/>
+    </ptLine>
+    <ptLine id="8037715" name="Airport Express Line (New Delhi Airport Express Terminal → Dwarka Sector 25)" line="AEx" type="subway" vClass="subway" color="255,140,0" completeness="0.29" missingAfter="5">
+        <route edges="604707698#0 604707698#1"/>
+        <busStop id="-5737167170" name="New Delhi Airport Express Terminal"/>
+        <busStop id="-5737166761" name="Shivaji Stadium"/>
+    </ptLine>
+    <ptLine id="8055718" name="894: Karampura -&gt; Okhla" line="894" type="bus" vClass="bus" completeness="0.08" missingBefore="8" missingAfter="2">
+        <busStop id="971653361" name="Baroda House"/>
+    </ptLine>
+    <ptLine id="8126651" name="391: Kalyanpuri -&gt; Kendriya Terminal" line="391" type="bus" vClass="bus" completeness="0.14" missingBefore="23">
+        <route edges="998790356#0 998790356#1 998790356#2 998790356#3 998790356#4 998790356#5 998790356#6 998790356#7 998790356#8 998790354#0 998790354#1 998790354#2 998790354#3 998790354#4 998790354#5 998790354#7"/>
+        <busStop id="5587022727" name="Kasturba Gandhi Marg Crossing"/>
+        <busStop id="5587022726" name="Firoz Shah Road"/>
+        <busStop id="5637100894" name="Patel Chowk"/>
+        <busStop id="5637101391" name="Gurudwara Bangla Sahib"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="8222917" name="944: Sultanpuri =&gt; Kendriya Terminal" line="944" type="bus" vClass="bus" completeness="1.00">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="8222918" name="944: Kendriya Terminal =&gt; Sultanpuri" line="944" type="bus" vClass="bus" completeness="1.00">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+    </ptLine>
+    <ptLine id="8222919" name="810: Kendriya Terminal =&gt; Uttam Nagar" line="810" type="bus" vClass="bus" completeness="1.00">
+        <route edges="581245363#4 570413588#0 570413588#1 714990513#0 714990513#1 714990513#2 714990513#3"/>
+        <busStop id="5561975423" name="Kendriya Terminal"/>
+        <busStop id="5483332064" name="Kendriya Terminal Church Road"/>
+    </ptLine>
+    <ptLine id="8222920" name="810: Uttam Nagar =&gt; Kendriya Terminal" line="810" type="bus" vClass="bus" completeness="1.00">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="8222921" name="390: Mayur Vihar Phase 3 =&gt; Kendriya Terminal" line="390" type="bus" vClass="bus" completeness="0.04" missingBefore="27">
+        <route edges="714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="8238141" name="349: Mayur Vihar Phase 2 -&gt; Kendriya Terminal" line="349" type="bus" vClass="bus" completeness="0.36" missingBefore="15">
+        <route edges="563974735#0 563974735#1 563974735#2 563974735#3 563974735#4 563974735#5 563974735#6 563974735#7 563974733#1 995793692#0 995793692#1 995793692#2 995793692#4 995793692#5 995793692#6 995793692#7 563975284#0 563974730#0 563974730#1 563974730#2 563974730#3 563974730#4 563974730#5 996679779#1 996679779#2 996679779#3 996679779#4 996679779#5 996679779#6 996679779#7 996679779#8 447141147#0 447141147#1 1493678697 24583324#0 24583324#1 590609994#0 590609994#1 717907807#0 717907807#1 717907807#2 717907807#3 717907807#4 717907807#6 24583320#0 24583320#1 24584375#0 24584375#1 24584375#3 24584375#4 24584375#5 24584375#6 24584375#7 24584375#8 24584375#9 24584375#10 24584375#11 447141153#0 447141153#1 24584389#0 24584389#1 24584389#2 24584389#3 714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5432714822" name=""/>
+        <busStop id="9214974884" name="Janpath"/>
+        <busStop id="6404197725" name="Police Station Parliament Street"/>
+        <busStop id="5637100894" name="Patel Chowk"/>
+        <busStop id="5637101391" name="Gurudwara Bangla Sahib"/>
+        <busStop id="6225478959" name="New Delhi Post Office"/>
+        <busStop id="6225479426" name="NDPO"/>
+        <busStop id="6225479657" name=""/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+    <ptLine id="8238142" name="378: Mayur Vihar Phase 3 -&gt; Kendriya Terminal" line="378" type="bus" vClass="bus" completeness="0.19" missingBefore="35">
+        <route edges="563974735#0 563974735#1 563974735#2 563974735#3 563974735#4 563974735#5 563974735#6 563974735#7 563974733#1 995793692#0 995793692#1 995793692#2 995793692#4 995793692#5 995793692#6 995793692#7 563975284#0 563974730#0 563974730#1 563974730#2 563974730#3 563974730#4 563974730#5 996679779#1 996679779#2 996679779#3 996679779#4 996679779#5 996679779#6 996679779#7 996679779#8 447141147#0 447141147#1 1493678697 24583324#0 24583324#1 590609994#0 590609994#1 717907807#0 717907807#1 717907807#2 717907807#3 717907807#4 717907807#6 24583320#0 24583320#1 24584375#0 24584375#1 24584375#3 24584375#4 24584375#5 24584375#6 24584375#7 24584375#8 24584375#9 24584375#10 24584375#11 447141153#0 447141153#1 24584389#0 24584389#1 24584389#2 24584389#3 714990514#0 714990514#1 24584398#0 24584398#1 24584398#2 24584398#3 24584398#4 570413587#0 570413587#1"/>
+        <busStop id="5432714822" name=""/>
+        <busStop id="6404197725" name="Police Station Parliament Street"/>
+        <busStop id="5637100894" name="Patel Chowk"/>
+        <busStop id="5637101391" name="Gurudwara Bangla Sahib"/>
+        <busStop id="6225478959" name="New Delhi Post Office"/>
+        <busStop id="6225479426" name="NDPO"/>
+        <busStop id="6225479657" name=""/>
+        <busStop id="5483954444" name="Kendriya Terminal"/>
+    </ptLine>
+</ptLines>

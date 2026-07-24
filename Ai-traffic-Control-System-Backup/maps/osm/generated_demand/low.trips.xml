@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-14 15:54:07.650371 by Eclipse SUMO randomTrips.py v1_27_1+0000-7717f2379d9
+<configuration>
+    <net-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\osm.net.xml.gz"/>
+    <output-trip-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\generated_demand\low.trips.xml"/>
+    <prefix value="low_"/>
+    <edge-permission value="passenger"/>
+    <seed value="101"/>
+    <min-distance value="300.0"/>
+    <remove-loops value="True"/>
+    <end value="900.0"/>
+    <insertion-rate value="300.0"/>
+    <random-depart value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="low_0" depart="10.00" from="998790356#8" to="1493678699#0"/>
+    <trip id="low_1" depart="47.00" from="-80926778#4" to="563974735#7"/>
+    <trip id="low_2" depart="55.00" from="1287398725#4" to="998790358#16"/>
+    <trip id="low_3" depart="62.00" from="686696028#0" to="717907817#4"/>
+    <trip id="low_4" depart="65.00" from="24583593#5" to="-24584414#2"/>
+    <trip id="low_5" depart="99.00" from="709276133#1" to="24583327#3"/>
+    <trip id="low_6" depart="103.00" from="712992071#4" to="-24584421#0"/>
+    <trip id="low_7" depart="106.00" from="24583487#12" to="712992074#12"/>
+    <trip id="low_8" depart="109.00" from="995792406#0" to="-1438583474#4"/>
+    <trip id="low_9" depart="139.00" from="24583768#3" to="24583487#9"/>
+    <trip id="low_10" depart="139.00" from="447141138#0" to="164786644#1"/>
+    <trip id="low_11" depart="141.00" from="675478334#8" to="31756488"/>
+    <trip id="low_12" depart="168.00" from="24584384#0" to="24584381#1"/>
+    <trip id="low_13" depart="168.00" from="24577096#1" to="24584418#3"/>
+    <trip id="low_14" depart="190.00" from="370672194#2" to="778199266#2"/>
+    <trip id="low_15" depart="219.00" from="-24584512#1" to="80926764#1"/>
+    <trip id="low_16" depart="236.00" from="24583495#0" to="998790354#0"/>
+    <trip id="low_17" depart="248.00" from="996679779#8" to="-235103610#2"/>
+    <trip id="low_18" depart="276.00" from="-24584381#0" to="1053851211#8"/>
+    <trip id="low_19" depart="278.00" from="116046167#5" to="-1307222666#0"/>
+    <trip id="low_20" depart="291.00" from="24583495#4" to="998790361"/>
+    <trip id="low_21" depart="292.00" from="24577096#13" to="-24584511#6"/>
+    <trip id="low_22" depart="295.00" from="343654534#1" to="1072960941#0"/>
+    <trip id="low_23" depart="304.00" from="-80926781#2" to="-24584384#6"/>
+    <trip id="low_24" depart="354.00" from="24577096#5" to="1438583475#4"/>
+    <trip id="low_25" depart="373.00" from="24583339#1" to="611866595#3"/>
+    <trip id="low_26" depart="377.00" from="-80926781#3" to="998790354#3"/>
+    <trip id="low_27" depart="381.00" from="-24584417#0" to="-1072960944#0"/>
+    <trip id="low_28" depart="391.00" from="1271156421#2" to="24584384#6"/>
+    <trip id="low_29" depart="397.00" from="24584502" to="-1122231679"/>
+    <trip id="low_30" depart="406.00" from="1072960945#1" to="596373338#5"/>
+    <trip id="low_31" depart="430.00" from="24577097#3" to="-24584512#1"/>
+    <trip id="low_32" depart="430.00" from="24584378#1" to="1053851217"/>
+    <trip id="low_33" depart="448.00" from="-1072963716#0" to="-24583592#6"/>
+    <trip id="low_34" depart="453.00" from="1073010466" to="1122230047#1"/>
+    <trip id="low_35" depart="464.00" from="1287398725#2" to="24584419#0"/>
+    <trip id="low_36" depart="467.00" from="563679836#15" to="24583332#5"/>
+    <trip id="low_37" depart="491.00" from="-371342951#5" to="24584512#0"/>
+    <trip id="low_38" depart="493.00" from="-24583768#0" to="-24583584#1"/>
+    <trip id="low_39" depart="499.00" from="-1073010464" to="711421334#6"/>
+    <trip id="low_40" depart="501.00" from="-278577245#3" to="278577245#5"/>
+    <trip id="low_41" depart="528.00" from="686673952#0" to="24583327#7"/>
+    <trip id="low_42" depart="538.00" from="24584409#3" to="-371342951#0"/>
+    <trip id="low_43" depart="543.00" from="24577095#6" to="24583587#3"/>
+    <trip id="low_44" depart="554.00" from="-278577245#5" to="998790353#0"/>
+    <trip id="low_45" depart="610.00" from="563791811#1" to="-686644352#2"/>
+    <trip id="low_46" depart="636.00" from="24583773" to="1074764284#1"/>
+    <trip id="low_47" depart="638.00" from="712992074#6" to="1537111946#1"/>
+    <trip id="low_48" depart="640.00" from="-1122270718" to="24583584#2"/>
+    <trip id="low_49" depart="676.00" from="-343654534#0" to="-1121186669#1"/>
+    <trip id="low_50" depart="679.00" from="720546573#0" to="998790353#1"/>
+    <trip id="low_51" depart="693.00" from="24584391#2" to="708488754#2"/>
+    <trip id="low_52" depart="700.00" from="-1072960944#0" to="782774056#1"/>
+    <trip id="low_53" depart="704.00" from="278577243#0" to="577982260#2"/>
+    <trip id="low_54" depart="713.00" from="995792406#1" to="24577114#1"/>
+    <trip id="low_55" depart="724.00" from="611866597" to="24584418#0"/>
+    <trip id="low_56" depart="730.00" from="-1122026496#1" to="712992071#9"/>
+    <trip id="low_57" depart="744.00" from="24584380#8" to="-24583584#1"/>
+    <trip id="low_58" depart="745.00" from="-235103610#0" to="24584397"/>
+    <trip id="low_59" depart="751.00" from="24563435#1" to="24583335#2"/>
+    <trip id="low_60" depart="760.00" from="-1438583474#7" to="24577096#6"/>
+    <trip id="low_61" depart="763.00" from="998790353#1" to="-24583489#2"/>
+    <trip id="low_62" depart="770.00" from="-1053851211#8" to="1122220363"/>
+    <trip id="low_63" depart="776.00" from="24584420#7" to="24583487#3"/>
+    <trip id="low_64" depart="779.00" from="998790356#1" to="562499724#9"/>
+    <trip id="low_65" depart="788.00" from="760817631#1" to="582759331#0"/>
+    <trip id="low_66" depart="791.00" from="-24583592#5" to="998790357#0"/>
+    <trip id="low_67" depart="814.00" from="717907817#2" to="80926781#0"/>
+    <trip id="low_68" depart="834.00" from="596373338#7" to="370672194#3"/>
+    <trip id="low_69" depart="841.00" from="712992074#8" to="-24583488#0"/>
+    <trip id="low_70" depart="850.00" from="24583339#6" to="-1072960941#0"/>
+    <trip id="low_71" depart="855.00" from="760817632#0" to="563974730#0"/>
+    <trip id="low_72" depart="874.00" from="80926764#5" to="1072960946#3"/>
+    <trip id="low_73" depart="879.00" from="717907817#4" to="24577096#6"/>
+    <trip id="low_74" depart="899.00" from="-24584512#1" to="-24584384#2"/>
+</routes>

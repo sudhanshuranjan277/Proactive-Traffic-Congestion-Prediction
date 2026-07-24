@@ -1,0 +1,137 @@
+# ==========================================================
+# TransGTR Dataset Configuration
+# Paper:
+# Transferable Graph Structure Learning for
+# Graph-based Traffic Forecasting Across Cities (KDD 2023)
+# ==========================================================
+
+dataset:
+
+  # --------------------------------------------------------
+  # Dataset Selection
+  # --------------------------------------------------------
+  name: "METR-LA"
+
+  # Supported datasets
+  # METR-LA
+  # PEMS-BAY
+  # PEMSD7M
+  # SUMO (Future)
+  supported:
+    - METR-LA
+    - PEMS-BAY
+    - PEMSD7M
+    - SUMO
+
+  # --------------------------------------------------------
+  # Dataset Paths
+  # --------------------------------------------------------
+  root_dir: "./datasets"
+
+  raw_dir: "./datasets/raw"
+
+  processed_dir: "./datasets/processed"
+
+  cache_dir: "./datasets/cache"
+
+  graph_dir: "./datasets/graphs"
+
+# ==========================================================
+# Data Split
+# ==========================================================
+
+split:
+
+  train_ratio: 0.70
+
+  validation_ratio: 0.10
+
+  test_ratio: 0.20
+
+  shuffle: false
+
+# ==========================================================
+# Time Series Configuration
+# ==========================================================
+
+sequence:
+
+  input_length: 12
+
+  prediction_length: 12
+
+  stride: 1
+
+# ==========================================================
+# Data Preprocessing
+# ==========================================================
+
+preprocessing:
+
+  normalize: true
+
+  normalization: "z_score"
+
+  remove_missing: false
+
+  fill_missing: true
+
+  fill_method: "forward_fill"
+
+  remove_duplicates: true
+
+  sort_by_timestamp: true
+
+# ==========================================================
+# Graph Construction
+# ==========================================================
+
+graph:
+
+  graph_type: "distance"
+
+  adaptive_graph: true
+
+  self_loop: true
+
+  normalize_adjacency: true
+
+# ==========================================================
+# DataLoader
+# ==========================================================
+
+dataloader:
+
+  batch_size: 64
+
+  shuffle: true
+
+  num_workers: 4
+
+  pin_memory: true
+
+  persistent_workers: true
+
+  drop_last: false
+
+# ==========================================================
+# Reproducibility
+# ==========================================================
+
+seed:
+
+  value: 42
+
+  deterministic: true
+
+# ==========================================================
+# Output
+# ==========================================================
+
+output:
+
+  save_processed_dataset: true
+
+  processed_format: ".pt"
+
+  overwrite_existing: false

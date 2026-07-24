@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-21 18:17:43.698120 by Eclipse SUMO $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_27_1+0000-7717f2379d9
+<configuration>
+    <net-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\osm_stops.add.xml"/>
+    <output-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\stopinfos.xml"/>
+    <routes-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\vehroutes.xml"/>
+    <trips-file value="C:\Users\sudha\Sumo\2026-07-21-18-16-49\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <types value="bus,minibus,share_taxi,aerialway"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="subway"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="cable_car" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_984A:0" type="pt_bus" depart="3.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="1_bus_479A:0" type="pt_bus" depart="15.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="2_bus_166:0" type="pt_bus" depart="15.0" departLane="best" from="584241789#1" to="296963058#7">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5273109722" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="5426390776" duration="30"/>  <!-- ISPAT Bhawan -->
+        <stop busStop="5426390921" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="355435748" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="5732544103" duration="30"/>  <!-- Shahjahan Road UPSC -->
+    </trip>
+    <trip id="3_bus_166:1" type="pt_bus" depart="17.0" departLane="best" from="680551206" to="176466583">
+        <stop busStop="6854465827" duration="30"/>  <!-- Humayun Road -->
+        <stop busStop="5426389916" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="7062645321" duration="30"/>  <!-- Bharti Nagar -->
+        <stop busStop="5426388555" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="7062680765" duration="30"/>  <!-- Jawaharlal Nehru Stadium -->
+        <stop busStop="7062680768" duration="30"/>  <!-- ISPAT Bhawan -->
+        <stop busStop="7062680766" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="6372277578" duration="30"/>  <!-- Dargah Hazarat Nizamuddin -->
+        <stop busStop="6385492244" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="5_bus_347:0" type="pt_bus" depart="27.0" departLane="best" from="76834871" to="852601468#2">
+        <stop busStop="7242732172" duration="30"/>  <!-- Temporary Stop -->
+        <stop busStop="6497707582" duration="30"/>  <!-- Delhi Police Apartment -->
+    </trip>
+    <trip id="9_bus_623:0" type="pt_bus" depart="58.0" departLane="best" from="28746245" to="296963058#7">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6766175603" duration="30"/>  <!-- PT College (Kotla) -->
+        <stop busStop="6766995948" duration="30"/>  <!-- Defence Colony (Homeopathic College) -->
+        <stop busStop="5701997798" duration="30"/>  <!-- Sukhdev Vihar -->
+        <stop busStop="6449436641" duration="30"/>  <!-- Seva Nagar Flyover -->
+        <stop busStop="2578295201" duration="30"/>  <!-- Jawaharlal Nehru Stadium -->
+        <stop busStop="7655631092" duration="30"/>  <!-- Pragati Vihar -->
+        <stop busStop="5426390921" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="7655631102" duration="30"/>  <!-- Bharti Nagar -->
+        <stop busStop="355435748" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="5732544103" duration="30"/>  <!-- Shahjahan Road UPSC -->
+    </trip>
+    <trip id="14_bus_966EX:0" type="pt_bus" depart="119.0" departLane="best" from="176466583" to="176466583">
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="27_bus_BPExp:0" type="pt_bus" depart="160.0" departLane="best" from="679552303" to="1491586817">
+        <stop busStop="6362607175" duration="30"/>  <!-- Nizamuddin Road Bridge -->
+        <stop busStop="6362085192" duration="30"/>  <!-- Indraprastha Park -->
+        <stop busStop="13669726310" duration="30"/>  <!-- Sarai Kale Khan -->
+    </trip>
+    <trip id="28_bus_BPExp:1" type="pt_bus" depart="165.0" departLane="best" from="1491586823" to="70258948#2">
+        <stop busStop="838835305" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6362085190" duration="30"/>  <!-- Indraprastha Park -->
+        <stop busStop="6362085189" duration="30"/>  <!-- Nizamuddin Road Bridge -->
+    </trip>
+    <trip id="34_bus_534:0" type="pt_bus" depart="204.0" departLane="best" from="37703539#0" to="813012744">
+        <stop busStop="5121928122" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="7171446389" duration="30"/>  <!-- PWD Office -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+    </trip>
+    <trip id="35_bus_534A:0" type="pt_bus" depart="218.0" departLane="best" from="37703539#0" to="813012744">
+        <stop busStop="5121928122" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="7171446389" duration="30"/>  <!-- PWD Office -->
+    </trip>
+    <trip id="36_bus_578:0" type="pt_bus" depart="222.0" departLane="best" from="28746245" to="676708024">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5541755269" duration="30"/>  <!-- Kidwai Nagar -->
+        <stop busStop="6336918971" duration="30"/>  <!-- Safdarjung Terminal -->
+    </trip>
+    <trip id="37_bus_519:0" type="pt_bus" depart="227.0" departLane="best" from="29534879" to="676708024">
+        <stop busStop="5732543211" duration="30"/>  <!-- A.I.I.M.S. -->
+        <stop busStop="5541755269" duration="30"/>  <!-- Kidwai Nagar -->
+        <stop busStop="6336918971" duration="30"/>  <!-- Safdarjung Terminal -->
+    </trip>
+    <trip id="38_bus_427:0" type="pt_bus" depart="227.0" departLane="best" from="584241789#1" to="566009660#3">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+        <stop busStop="5584872921" duration="30"/>  <!-- Ashram -->
+        <stop busStop="5426389543" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5430723253" duration="30"/>  <!-- Sri Niwas Puri -->
+    </trip>
+    <trip id="39_bus_410:0" type="pt_bus" depart="237.0" departLane="best" from="-653235647#0" to="582461172">
+        <stop busStop="-6122143946" duration="30"/>  <!-- Jal Vihar Terminal -->
+        <stop busStop="6203988021" duration="30"/>  <!-- Lajpat Nagar (DJB) -->
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5584870725" duration="30"/>  <!-- Ashram -->
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="6077096067" duration="30"/>  <!-- Golf Club -->
+        <stop busStop="6385537594" duration="30"/>  <!-- Bapa Nagar -->
+    </trip>
+    <trip id="40_bus_611:0" type="pt_bus" depart="253.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="41_bus_727:0" type="pt_bus" depart="275.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="42_bus_544:0" type="pt_bus" depart="303.0" departLane="best" from="28746245" to="265940883#2">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="43_bus_469:0" type="pt_bus" depart="321.0" departLane="best" from="566680388#0" to="813012744">
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5121928122" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+    </trip>
+    <trip id="44_bus_450:0" type="pt_bus" depart="326.0" departLane="best" from="-653235647#0" to="44317041#5">
+        <stop busStop="-6122143946" duration="30"/>  <!-- Jal Vihar Terminal -->
+        <stop busStop="6203988021" duration="30"/>  <!-- Lajpat Nagar (DJB) -->
+    </trip>
+    <trip id="45_bus_413:0" type="pt_bus" depart="331.0" departLane="best" from="584241789#1" to="1313027075">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+        <stop busStop="5584872921" duration="30"/>  <!-- Ashram -->
+        <stop busStop="5585958328" duration="30"/>  <!-- Nehru Nagar -->
+    </trip>
+    <trip id="46_bus_543:0" type="pt_bus" depart="334.0" departLane="best" from="28746245" to="813012744">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426391723" duration="30"/>  <!-- South Extension -->
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5121928122" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+    </trip>
+    <trip id="47_bus_479:0" type="pt_bus" depart="336.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="48_bus_450:1" type="pt_bus" depart="346.0" departLane="best" from="80958874#0" to="44316346">
+        <stop busStop="7019144405" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="5426388555" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="5432771968" duration="30"/>  <!-- Pragati Vihar -->
+        <stop busStop="2578295203" duration="30"/>  <!-- Jawaharlal Nehru Stadium -->
+        <stop busStop="6786032368" duration="30"/>  <!-- Sukhdev Vihar -->
+        <stop busStop="5431738836" duration="30"/>  <!-- Defence Colony (Homeopathic College) -->
+        <stop busStop="1694776065" duration="30"/>  <!-- PT College (Kotla) -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="49_bus_413:1" type="pt_bus" depart="350.0" departLane="best" from="169413591#0" to="176466583">
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5584870725" duration="30"/>  <!-- Ashram -->
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="50_bus_323:0" type="pt_bus" depart="353.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="51_bus_(-)_TMS:0" type="pt_bus" depart="362.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="52_bus_543A:0" type="pt_bus" depart="365.0" departLane="best" from="28746245" to="565938871#2">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="53_bus_427:1" type="pt_bus" depart="371.0" departLane="best" from="566680388#0" to="176466583">
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5584870725" duration="30"/>  <!-- Ashram -->
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="54_bus_418A:0" type="pt_bus" depart="381.0" departLane="best" from="77339656#11" to="585446277#1">
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5342182750" duration="30"/>  <!-- None -->
+        <stop busStop="5342182505" duration="30"/>  <!-- None -->
+    </trip>
+    <trip id="55_bus_405:0" type="pt_bus" depart="383.0" departLane="best" from="77339656#11" to="562479736#4">
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5273109722" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="5342182750" duration="30"/>  <!-- None -->
+        <stop busStop="5342182505" duration="30"/>  <!-- None -->
+    </trip>
+    <trip id="59_bus_410:1" type="pt_bus" depart="393.0" departLane="best" from="44831985#0" to="38116089#13">
+        <stop busStop="6385537600" duration="30"/>  <!-- Bapa Nagar -->
+        <stop busStop="6372277579" duration="30"/>  <!-- Golf Club -->
+        <stop busStop="6372277578" duration="30"/>  <!-- Dargah Hazarat Nizamuddin -->
+        <stop busStop="6385492244" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5584872921" duration="30"/>  <!-- Ashram -->
+        <stop busStop="5426389543" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5430723253" duration="30"/>  <!-- Sri Niwas Puri -->
+        <stop busStop="6372277576" duration="30"/>  <!-- Lajpat Nagar (DJB) -->
+        <stop busStop="6122143946" duration="30"/>  <!-- Jal Vihar Terminal -->
+    </trip>
+    <trip id="60_bus_442:0" type="pt_bus" depart="406.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="61_bus_724:0" type="pt_bus" depart="410.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+    </trip>
+    <trip id="62_bus_(-)_OMS:0" type="pt_bus" depart="418.0" departLane="best" from="566680388#0" to="813012744">
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="6395693844" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+    </trip>
+    <trip id="63_bus_460:0" type="pt_bus" depart="422.0" departLane="best" from="662141606#0" to="1313027075">
+        <stop busStop="6198752458" duration="30"/>  <!-- New Friends Colony -->
+        <stop busStop="910451189" duration="30"/>  <!-- Ashram -->
+        <stop busStop="5585958328" duration="30"/>  <!-- Nehru Nagar -->
+    </trip>
+    <trip id="64_bus_181A:0" type="pt_bus" depart="437.0" departLane="best" from="680551206" to="176466583">
+        <stop busStop="6854465827" duration="30"/>  <!-- Humayun Road -->
+        <stop busStop="5426389916" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="7062645321" duration="30"/>  <!-- Bharti Nagar -->
+        <stop busStop="5426388555" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="7062680765" duration="30"/>  <!-- Jawaharlal Nehru Stadium -->
+        <stop busStop="7062680768" duration="30"/>  <!-- ISPAT Bhawan -->
+        <stop busStop="7062680766" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="6372277578" duration="30"/>  <!-- Dargah Hazarat Nizamuddin -->
+        <stop busStop="6385492244" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="65_bus_181A:1" type="pt_bus" depart="437.0" departLane="best" from="584241789#1" to="296963058#4">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5273109722" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="5426390776" duration="30"/>  <!-- ISPAT Bhawan -->
+        <stop busStop="5426390921" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="7655631102" duration="30"/>  <!-- Bharti Nagar -->
+        <stop busStop="355435748" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="10221267679" duration="30"/>  <!-- Humayun Road -->
+        <stop busStop="5732544103" duration="30"/>  <!-- Shahjahan Road UPSC -->
+    </trip>
+    <trip id="66_bus_543B:0" type="pt_bus" depart="441.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5426388566" duration="30"/>  <!-- South Extension -->
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="67_bus_Gurgaon_→_Anand_Vihar_ISBT:0" type="pt_bus" depart="465.0" departLane="best" from="28746245" to="44316346">
+        <stop busStop="6112155497" duration="30"/>  <!-- Andrews Ganj -->
+    </trip>
+    <trip id="68_bus_624A:0" type="pt_bus" depart="483.0" departLane="best" from="28746245" to="689446381">
+        <stop busStop="4819437823" duration="30"/>  <!-- Safdarjung Hospital -->
+        <stop busStop="5541755269" duration="30"/>  <!-- Kidwai Nagar -->
+    </trip>
+    <trip id="71_bus_492:0" type="pt_bus" depart="497.0" departLane="best" from="566680388#0" to="852601468#2">
+        <stop busStop="6497625779" duration="30"/>  <!-- PGDAV College -->
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="6395693844" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="7171446389" duration="30"/>  <!-- PWD Office -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+        <stop busStop="7242732172" duration="30"/>  <!-- Temporary Stop -->
+        <stop busStop="6497707582" duration="30"/>  <!-- Delhi Police Apartment -->
+    </trip>
+    <trip id="72_bus_966:0" type="pt_bus" depart="505.0" departLane="best" from="584241789#1" to="176466591#5">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="73_bus_794:0" type="pt_bus" depart="508.0" departLane="best" from="562340228#0" to="44315451#1">
+        <stop busStop="938635417" duration="30"/>  <!-- Nizamuddin Railway Station -->
+        <stop busStop="5441523402" duration="30"/>  <!-- Central School Lodhi Road -->
+        <stop busStop="-7154453335" duration="30"/>  <!-- Lodhi Colony Market -->
+        <stop busStop="5715392714" duration="30"/>  <!-- Lodhi Colony -->
+        <stop busStop="5483332132" duration="30"/>  <!-- Safdarjung Airport -->
+        <stop busStop="5483331962" duration="30"/>  <!-- Kidwai Nagar -->
+    </trip>
+    <trip id="74_bus_966:1" type="pt_bus" depart="517.0" departLane="best" from="80439704#0" to="176466583">
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="75_bus_794:1" type="pt_bus" depart="525.0" departLane="best" from="676708026#0" to="176466583">
+        <stop busStop="5541755269" duration="30"/>  <!-- Kidwai Nagar -->
+        <stop busStop="5541755268" duration="30"/>  <!-- None -->
+        <stop busStop="5732542138" duration="30"/>  <!-- Safdarjung Airport -->
+        <stop busStop="5732543997" duration="30"/>  <!-- Safdarjung Madrasa -->
+        <stop busStop="-5715393721" duration="30"/>  <!-- Lodhi Colony -->
+        <stop busStop="5441523433" duration="30"/>  <!-- Lodhi Colony Block 12-13 -->
+        <stop busStop="5441522259" duration="30"/>  <!-- Central School Lodhi Road -->
+        <stop busStop="938635590" duration="30"/>  <!-- Nizamuddin Railway Station -->
+    </trip>
+    <trip id="76_bus_(-)_TMS:1" type="pt_bus" depart="535.0" departLane="best" from="566680388#0" to="70258948#2">
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5121928122" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6362085192@9297931" duration="30"/>  <!-- Indraprastha Park -->
+        <stop busStop="6362085189" duration="30"/>  <!-- Nizamuddin Road Bridge -->
+    </trip>
+    <trip id="77_bus_405:1" type="pt_bus" depart="548.0" departLane="best" from="662141606#0" to="562479736#4">
+        <stop busStop="6198752458" duration="30"/>  <!-- New Friends Colony -->
+        <stop busStop="910451189" duration="30"/>  <!-- Ashram -->
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5273109722" duration="30"/>  <!-- DPS School (near Neela Gumbad) -->
+        <stop busStop="5342182750" duration="30"/>  <!-- None -->
+        <stop busStop="5342182505" duration="30"/>  <!-- None -->
+    </trip>
+    <trip id="78_bus_410A:0" type="pt_bus" depart="561.0" departLane="best" from="44831985#0" to="38116089#13">
+        <stop busStop="6385537600" duration="30"/>  <!-- Bapa Nagar -->
+        <stop busStop="6372277579" duration="30"/>  <!-- Golf Club -->
+        <stop busStop="6372277578" duration="30"/>  <!-- Dargah Hazarat Nizamuddin -->
+        <stop busStop="6385492244" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="5584872921" duration="30"/>  <!-- Ashram -->
+        <stop busStop="5426389543" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5430723253" duration="30"/>  <!-- Sri Niwas Puri -->
+        <stop busStop="6372277576" duration="30"/>  <!-- Lajpat Nagar (DJB) -->
+        <stop busStop="6122143946" duration="30"/>  <!-- Jal Vihar Terminal -->
+    </trip>
+    <trip id="79_bus_410A:1" type="pt_bus" depart="565.0" departLane="best" from="-653235647#0" to="582461172">
+        <stop busStop="-6122143946" duration="30"/>  <!-- Jal Vihar Terminal -->
+        <stop busStop="6203988021" duration="30"/>  <!-- Lajpat Nagar (DJB) -->
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="5584870725" duration="30"/>  <!-- Ashram -->
+        <stop busStop="6371764317" duration="30"/>  <!-- Hazarat Nizamuddin -->
+        <stop busStop="6077096067" duration="30"/>  <!-- Golf Club -->
+        <stop busStop="6385537594" duration="30"/>  <!-- Bapa Nagar -->
+    </trip>
+    <trip id="80_bus_311A:0" type="pt_bus" depart="574.0" departLane="best" from="566680388#0" to="813012744">
+        <stop busStop="6497625779" duration="30"/>  <!-- PGDAV College -->
+        <stop busStop="5426388558" duration="30"/>  <!-- Nehru Nagar -->
+        <stop busStop="6395693844" duration="30"/>  <!-- Maharani Bagh -->
+        <stop busStop="5121928125" duration="30"/>  <!-- Gurudwara Bala Sahib -->
+        <stop busStop="5121928128" duration="30"/>  <!-- Sarai Kale Khan -->
+        <stop busStop="5121928130" duration="30"/>  <!-- Sarai Kale Khan ISBT -->
+        <stop busStop="6396989742" duration="30"/>  <!-- Khel Gaon -->
+    </trip>
+    <trip id="81_bus_623:1" type="pt_bus" depart="583.0" departLane="best" from="680551206" to="44315451#1">
+        <stop busStop="6854465827" duration="30"/>  <!-- Humayun Road -->
+        <stop busStop="5426389916" duration="30"/>  <!-- Sujan Singh Park -->
+        <stop busStop="7062645321" duration="30"/>  <!-- Bharti Nagar -->
+        <stop busStop="5426388555" duration="30"/>  <!-- Dayal Singh College -->
+        <stop busStop="5432771968" duration="30"/>  <!-- Pragati Vihar -->
+        <stop busStop="7655302453" duration="30"/>  <!-- None -->
+        <stop busStop="5248673897" duration="30"/>  <!-- Jawaharlal Nehru Stadium -->
+        <stop busStop="7167030420" duration="30"/>  <!-- Seva Nagar Flyover -->
+        <stop busStop="6786032368" duration="30"/>  <!-- Sukhdev Vihar -->
+        <stop busStop="5431738836" duration="30"/>  <!-- Defence Colony (Homeopathic College) -->
+        <stop busStop="1694776065" duration="30"/>  <!-- PT College (Kotla) -->
+        <stop busStop="5426391318" duration="30"/>  <!-- South Extension -->
+        <stop busStop="4819415322" duration="30"/>  <!-- All India Institute of Medical Sciences -->
+    </trip>
+    <trip id="82_bus_443:0" type="pt_bus" depart="593.0" departLane="best" from="76834871" to="852601468#2">
+        <stop busStop="7242732172" duration="30"/>  <!-- Temporary Stop -->
+        <stop busStop="6497707582" duration="30"/>  <!-- Delhi Police Apartment -->
+    </trip>
+</routes>

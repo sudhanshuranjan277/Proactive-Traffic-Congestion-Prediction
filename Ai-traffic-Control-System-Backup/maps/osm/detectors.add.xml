@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+
+    <inductionLoop
+        id="loop_osm_1"
+        lane="537797267#3_0"
+        pos="-10"
+        period="1"
+        file="detector_output.xml"/>
+
+    <inductionLoop
+        id="loop_osm_2"
+        lane="23134098#0_0"
+        pos="-10"
+        period="1"
+        file="detector_output.xml"/>
+
+</additional>
