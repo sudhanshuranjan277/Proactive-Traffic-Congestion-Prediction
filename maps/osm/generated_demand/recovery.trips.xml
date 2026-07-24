@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-07-14 15:54:29.747805 by Eclipse SUMO randomTrips.py v1_27_1+0000-7717f2379d9
+<configuration>
+    <net-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\osm.net.xml.gz"/>
+    <output-trip-file value="D:\SUMO_Workspace\Projects\Ai-traffic-Control-System\maps\osm\generated_demand\recovery.trips.xml"/>
+    <prefix value="recovery_"/>
+    <edge-permission value="passenger"/>
+    <seed value="505"/>
+    <min-distance value="300.0"/>
+    <remove-loops value="True"/>
+    <begin value="3300.0"/>
+    <insertion-rate value="300.0"/>
+    <random-depart value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="recovery_0" depart="3305.00" from="-24583495#5" to="1493678699#0"/>
+    <trip id="recovery_1" depart="3313.00" from="717907814#2" to="596373338#12"/>
+    <trip id="recovery_2" depart="3329.00" from="24583339#4" to="-80926773#1"/>
+    <trip id="recovery_3" depart="3332.00" from="553090004#0" to="-1271156421#1"/>
+    <trip id="recovery_4" depart="3360.00" from="-998790358#0" to="-998790356#2"/>
+    <trip id="recovery_5" depart="3367.00" from="711421334#2" to="80926764#0"/>
+    <trip id="recovery_6" depart="3375.00" from="1122230048" to="24583584#3"/>
+    <trip id="recovery_7" depart="3392.00" from="116046167#8" to="74851428#1"/>
+    <trip id="recovery_8" depart="3392.00" from="611866595#4" to="447141151#2"/>
+    <trip id="recovery_9" depart="3395.00" from="712992071#2" to="1474236997#0"/>
+    <trip id="recovery_10" depart="3397.00" from="1053851211#7" to="717907817#1"/>
+    <trip id="recovery_11" depart="3397.00" from="24584420#8" to="24583339#0"/>
+    <trip id="recovery_12" depart="3425.00" from="570413594" to="80921410#1"/>
+    <trip id="recovery_13" depart="3469.00" from="1072960946#3" to="-995792406#4"/>
+    <trip id="recovery_14" depart="3492.00" from="998790358#6" to="1072960944#0"/>
+    <trip id="recovery_15" depart="3498.00" from="686673952#1" to="24583495#5"/>
+    <trip id="recovery_16" depart="3503.00" from="24583594#0" to="24583334#0"/>
+    <trip id="recovery_17" depart="3525.00" from="998790358#3" to="24584419#0"/>
+    <trip id="recovery_18" depart="3539.00" from="1271156412#3" to="-686696454#0"/>
+    <trip id="recovery_19" depart="3543.00" from="24577114#0" to="-562499724#7"/>
+    <trip id="recovery_20" depart="3558.00" from="24583487#3" to="24584423#2"/>
+    <trip id="recovery_21" depart="3576.00" from="24583327#10" to="24584419#1"/>
+    <trip id="recovery_22" depart="3577.00" from="44352050#1" to="24583339#5"/>
+    <trip id="recovery_23" depart="3578.00" from="-1053851211#6" to="717907814#6"/>
+    <trip id="recovery_24" depart="3585.00" from="24577095#3" to="-370672194#7"/>
+</routes>
